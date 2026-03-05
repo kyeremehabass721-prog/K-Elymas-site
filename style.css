@@ -1,57 +1,85 @@
-body{
-font-family: Arial;
-margin:0;
-background:#f4f4f4;
-text-align:center;
+* {
+    box-sizing: border-box;
 }
 
-header{
-background:purple;
-color:white;
-padding:30px;
+body {
+    font-family: Arial;
+    margin: 0;
+    background: #f4f4f4;
+    text-align: center;
 }
 
-.about{
-padding:30px;
-background:white;
-margin:20px;
-border-radius:10px;
+header {
+    background: purple;
+    color: white;
+    padding: 30px;
+    font-size: 1.5em; /* slightly bigger for phones */
 }
 
-.books{
-display:flex;
-justify-content:center;
-gap:40px;
-margin:30px;
+.about, .contact {
+    padding: 20px;
+    background: white;
+    margin: 20px auto;
+    border-radius: 10px;
+    max-width: 900px;
+    text-align: left;
+    font-size: 1em;
 }
 
-.book{
-background:white;
-padding:20px;
-border-radius:10px;
-box-shadow:0 0 10px rgba(0,0,0,0.1);
+.books {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
 }
 
-a{
-display:inline-block;
-margin-top:10px;
-padding:10px 15px;
-background:purple;
-color:white;
-text-decoration:none;
-border-radius:5px;
+.book {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 45%; /* smaller on phones */
+    max-width: 220px;
 }
 
-.contact{
-background:white;
-padding:30px;
-margin:20px;
-border-radius:10px;
+.book img {
+    width: 100%;
+    border-radius: 5px;
 }
 
-footer{
-background:black;
-color:white;
-padding:15px;
-margin-top:20px;
+a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background: purple;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+footer {
+    background: black;
+    color: white;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+    .books {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .book {
+        width: 90%;
+        max-width: none;
+    }
+    header {
+        font-size: 1.2em;
+    }
+    .about, .contact {
+        font-size: 0.95em;
+    }
 }
