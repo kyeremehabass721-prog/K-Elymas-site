@@ -3,7 +3,7 @@
 }
 
 body {
-    font-family: Arial;
+    font-family: Arial, sans-serif;
     margin: 0;
     background: #f4f4f4;
     text-align: center;
@@ -13,7 +13,7 @@ header {
     background: purple;
     color: white;
     padding: 30px;
-    font-size: 1.5em; /* slightly bigger for phones */
+    font-size: 1.5em;
 }
 
 .about, .contact {
@@ -39,8 +39,9 @@ header {
     padding: 15px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    width: 45%; /* smaller on phones */
+    width: 45%;
     max-width: 220px;
+    text-align: center;
 }
 
 .book img {
