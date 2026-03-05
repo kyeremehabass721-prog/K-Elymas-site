@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>My Books</title>
+<style>
+body{
+    font-family: Arial, sans-serif;
+    background:#050814;
+    color:white;
+    margin:0;
+    padding:20px;
+}
+h1{
+    color:#7c7cff;
+    text-align:center;
+    margin-bottom:30px;
+}
+.book{
+    background:#111;
+    border-radius:10px;
+    padding:15px;
+    margin-bottom:20px;
+    max-width:400px;
+}
+.book img{
+    width:100%;
+    border-radius:10px;
+}
+.book h2{
+    margin:10px 0 5px 0;
+    font-size:20px;
+    color:#ff6bb5;
+}
+.book p{
+    font-size:14px;
+    color:#ccc;
+}
+a.button{
+    display:inline-block;
+    margin-top:10px;
+    padding:10px 20px;
+    border-radius:8px;
+    text-decoration:none;
+    color:white;
+    background:#2f5cff;
+    font-weight:bold;
+}
+a.back{
+    display:block;
+    margin-top:30px;
+    text-decoration:none;
+    color:#7c7cff;
+}
+.container{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+</style>
+</head>
+<body>
+
+<h1>My Books</h1>
+
+<div class="container">
+
+  <div class="book">
+    <img src="cover1.jpg" alt="Saved By Grace">
+    <h2>Saved By Grace</h2>
+    <p>A heart-touching gospel book to guide you in faith and excellence.</p>
+    <a class="button" href="SavedByGrace.pdf" target="_blank">Read / Download</a>
+  </div>
+
+  <div class="book">
+    <img src="cover2.jpg" alt="When Purpose Meets Excellence">
+    <h2>When Purpose Meets Excellence</h2>
+    <p>Discover your purpose and learn how to excel in every area of life.</p>
+    <a class="button" href="WhenPurposeMeetsExcellence.pdf" target="_blank">Read / Download</a>
+  </div>
+
+  <a class="back" href="index.html">← Back to Home</a>
+</div>
+
+</body>
+</html>
