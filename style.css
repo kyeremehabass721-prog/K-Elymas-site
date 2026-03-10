@@ -8,39 +8,44 @@ body {
 header {
     background: linear-gradient(90deg,#4b0082,#7a00cc);
     color: white;
-    padding: 40px;
+    padding: 40px 20px;
 }
 
 header h1 {
     margin: 0;
-    font-size: 36px;
+    font-size: 32px;
 }
 
-.about, .education, .contact {
+header p {
+    margin: 5px 0 0 0;
+    font-size: 18px;
+}
+
+section.about, section.education, section.contact {
     background: white;
     max-width: 900px;
-    margin: 30px auto;
-    padding: 30px;
+    margin: 20px auto;
+    padding: 25px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     text-align: left;
 }
 
-.education ul {
+section.education ul {
     list-style: none;
     padding: 0;
 }
 
-.education li {
-    padding: 5px;
+section.education li {
+    padding: 5px 0;
     font-size: 16px;
 }
 
-.books {
+section.books {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 25px;
+    gap: 20px;
     padding: 20px;
 }
 
@@ -68,11 +73,12 @@ header h1 {
     display: block;
     background: #ff7a00;
     color: white;
-    padding: 12px;
-    border-radius: 6px;
-    margin-top: 10px;
+    padding: 14px;
+    border-radius: 8px;
+    margin-top: 12px;
     text-decoration: none;
     font-weight: bold;
+    font-size: 16px;
 }
 
 footer {
@@ -82,12 +88,24 @@ footer {
     margin-top: 30px;
 }
 
-@media(max-width:600px) {
-    .books {
+/* Mobile adjustments */
+@media(max-width: 600px) {
+    section.books {
         flex-direction: column;
         align-items: center;
     }
     .book {
         width: 90%;
+        padding: 15px;
+    }
+    header h1 {
+        font-size: 28px;
+    }
+    header p {
+        font-size: 16px;
+    }
+    .buy {
+        font-size: 18px;
+        padding: 16px;
     }
 }
