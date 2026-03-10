@@ -1,86 +1,117 @@
-* {
-    box-sizing: border-box;
+{
+box-sizing:border-box;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    background: #f4f4f4;
-    text-align: center;
+body{
+font-family:Arial, Helvetica, sans-serif;
+margin:0;
+background:#f4f6f9;
+text-align:center;
 }
 
-header {
-    background: purple;
-    color: white;
-    padding: 30px;
-    font-size: 1.5em;
+header{
+background:linear-gradient(90deg,#4b0082,#7a00cc);
+color:white;
+padding:40px;
 }
 
-.about, .contact {
-    padding: 20px;
-    background: white;
-    margin: 20px auto;
-    border-radius: 10px;
-    max-width: 900px;
-    text-align: left;
-    font-size: 1em;
+header h1{
+margin:0;
+font-size:36px;
 }
 
-.books {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px;
+.about{
+background:white;
+padding:30px;
+margin:20px auto;
+max-width:900px;
+border-radius:10px;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
 }
 
-.book {
-    background: white;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    width: 45%;
-    max-width: 220px;
-    text-align: center;
+.books{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:25px;
+padding:20px;
 }
 
-.book img {
-    width: 100%;
-    border-radius: 5px;
+.book{
+background:white;
+padding:20px;
+border-radius:12px;
+width:260px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+transition:0.3s;
 }
 
-a {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 10px 15px;
-    background: purple;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 1em;
+.book:hover{
+transform:translateY(-5px);
 }
 
-footer {
-    background: black;
-    color: white;
-    padding: 15px;
-    margin-top: 20px;
+.book img{
+width:100%;
+border-radius:8px;
 }
 
-/* Mobile responsiveness */
-@media (max-width: 600px) {
-    .books {
-        flex-direction: column;
-        gap: 15px;
-    }
-    .book {
-        width: 90%;
-        max-width: none;
-    }
-    header {
-        font-size: 1.2em;
-    }
-    .about, .contact {
-        font-size: 0.95em;
-    }
+.book h3{
+margin-top:10px;
+}
+
+.price{
+font-size:18px;
+color:green;
+font-weight:bold;
+}
+
+.book a{
+display:block;
+margin:8px;
+padding:10px;
+border-radius:6px;
+text-decoration:none;
+color:white;
+font-weight:bold;
+}
+
+.read{
+background:#3498db;
+}
+
+.download{
+background:#2ecc71;
+}
+
+.buy{
+background:#e67e22;
+}
+
+.contact{
+background:white;
+padding:30px;
+margin:20px auto;
+max-width:600px;
+border-radius:10px;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
+footer{
+background:#111;
+color:white;
+padding:15px;
+margin-top:30px;
+}
+
+@media(max-width:600px){
+
+.books{
+flex-direction:column;
+align-items:center;
+}
+
+.book{
+width:90%;
+}
+
 }
