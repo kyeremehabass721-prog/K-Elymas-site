@@ -31,16 +31,19 @@ header p {
   border-radius: 10px;
   box-shadow: 0 3px 10px rgba(0,0,0,0.1);
   text-align: left;
+  overflow: hidden;
 }
 
+/* Author photo small circle on left */
 .author-photo {
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 50%;
-  float: left;
-  margin-right: 20px;
+  width: 100px;          /* small circular size */
+  height: 100px;
+  object-fit: cover;      /* face fully visible */
+  border-radius: 50%;     /* circle */
+  float: left;            /* left of text */
+  margin-right: 15px;
   margin-bottom: 15px;
+  border: 2px solid #4b0082; /* optional border */
 }
 
 /* Education */
@@ -119,11 +122,15 @@ footer {
 /* Mobile Responsive */
 @media(max-width:600px){
   .author-photo {
-    float: none;
-    display: block;
-    margin: 0 auto 15px auto;
-    width: 120px;
-    height: 120px;
+    width: 80px;           /* smaller on phone */
+    height: 80px;
+    float: left;           /* stays on left */
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+
+  .biography p {
+    font-size: 14px;       /* smaller text for mobile */
   }
 
   .book img {
