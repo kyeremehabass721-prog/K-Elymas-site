@@ -67,6 +67,7 @@ section.books {
     font-size: 18px;
     color: green;
     font-weight: bold;
+    margin-top: 10px;
 }
 
 .buy {
