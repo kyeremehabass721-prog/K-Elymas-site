@@ -1,3 +1,60 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  background: #f5f6fa;
+  text-align: center;
+}
+
+/* Header */
+header {
+  background: #4b0082;
+  color: white;
+  padding: 40px 20px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 32px;
+}
+
+header p {
+  margin-top: 5px;
+  font-size: 18px;
+}
+
+/* Biography */
+.biography {
+  background: white;
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  text-align: left;
+}
+
+/* Education */
+.education {
+  max-width: 900px;
+  margin: 30px auto;
+  text-align: left;
+}
+
+.school {
+  background: white;
+  margin: 15px 0;
+  padding: 20px;
+  border-left: 6px solid #4b0082;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.school span {
+  color: #4b0082;
+  font-weight: bold;
+}
+
+/* Books Section */
 .books {
   max-width: 1000px;
   margin: 30px auto;
@@ -11,7 +68,7 @@
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
   margin-bottom: 25px;
   overflow: hidden;
-  flex-wrap: wrap; /* allow stacking */
+  flex-wrap: wrap;
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
@@ -22,7 +79,7 @@
 
 .book-card img {
   width: 100%;
-  max-width: 200px; /* scales down on phone */
+  max-width: 200px;
   height: auto;
   object-fit: cover;
   flex-shrink: 0;
@@ -32,7 +89,7 @@
   padding: 20px;
   text-align: left;
   flex: 1 1 200px;
-  min-width: 0; /* allows text to wrap properly */
+  min-width: 0;
 }
 
 .book-info h3 {
@@ -61,11 +118,19 @@
   border-radius: 8px;
   font-weight: bold;
   text-align: center;
-  width: 100%; /* full width on mobile */
+  width: 100%;
   box-sizing: border-box;
 }
 
-/* Fully mobile responsive */
+/* Footer */
+footer {
+  background: #111;
+  color: white;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+/* Fully Mobile Responsive */
 @media(max-width: 600px) {
   .book-card {
     flex-direction: column;
@@ -74,7 +139,7 @@
   }
 
   .book-card img {
-    max-width: 90%; /* image scales down */
+    max-width: 90%;
     margin: 0 auto;
   }
 
