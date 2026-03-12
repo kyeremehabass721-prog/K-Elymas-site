@@ -75,19 +75,69 @@
   <p>Contact: +233 536782743</p>
   <p>© 2026 Kyeremeh Abass</p>
 </footer>
-
-<!--Start of Tawk.to Script-->
+<!-- Elymas Smart Chat -->
 <script type="text/javascript">
 var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+
 (function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+var s1=document.createElement("script"),
+s0=document.getElementsByTagName("script")[0];
 s1.async=true;
-s1.src='https://embed.tawk.to/69b28fdd9131281c38840904/1jjgo3uu8';
+s1.src='https://embed.tawk.to/1jjhblj57/default'; // <-- your new Widget ID
 s1.charset='UTF-8';
 s1.setAttribute('crossorigin','*');
 s0.parentNode.insertBefore(s1,s0);
 })();
+
+Tawk_API.onLoad = function(){
+
+// Open chat automatically
+Tawk_API.maximize();
+
+// Set Elymas profile (name + avatar)
+Tawk_API.setAttributes({
+'name': 'Elymas',
+'avatar': 'https://kyeremehabass721-prog.github.io/K-Elymas-site/images/author.jpg'
+}, function(error){});
+
+// First greeting
+setTimeout(function(){
+Tawk_API.addEventMessage("Hi! Welcome to Kyeremeh Abass Books Shop. How can Elymas help you?");
+},1500);
+
+// Automatic keyword-based replies
+Tawk_API.onChatMessage = function(message){
+  message = message.toLowerCase();
+
+  if(message.includes("hello") || message.includes("hi")){
+    Tawk_API.addEventMessage("Hello 👋 I am Elymas, your assistant. How can I help you today?");
+  }
+  else if(message.includes("book") || message.includes("books")){
+    Tawk_API.addMessage("We have two inspirational books:\n📖 Saved By Grace\n📖 When Purpose Meets Excellence\nYou can read their descriptions on the page.");
+  }
+  else if(message.includes("saved by grace")){
+    Tawk_API.addMessage("📖 Saved By Grace – teaches how God's grace transforms lives and brings hope.");
+  }
+  else if(message.includes("purpose") || message.includes("excellence")){
+    Tawk_API.addMessage("📖 When Purpose Meets Excellence – teaches how discovering your purpose and pursuing excellence can transform your life.");
+  }
+  else if(message.includes("price") || message.includes("cost") || message.includes("how much")){
+    Tawk_API.addMessage("📚 Book Prices:\nSaved By Grace – GH₵30\nWhen Purpose Meets Excellence – GH₵40");
+  }
+  else if(message.includes("buy") || message.includes("purchase")){
+    Tawk_API.addMessage("To buy a book, click the 'Buy with MoMo' button under the book you want.");
+  }
+  else if(message.includes("payment") || message.includes("momo")){
+    Tawk_API.addMessage("You can pay via MoMo:\n📱 0536782743\nAfter payment, the book will be made available to you.");
+  }
+  else if(message.includes("author") || message.includes("kyeremeh")){
+    Tawk_API.addMessage("Kyeremeh Abass is a Ghanaian Christian author writing inspirational books to help people discover purpose and faith.");
+  }
+  else{
+    Tawk_API.addMessage("Elymas here 🤖. You can ask me about our books, prices, or how to buy.");
+  }
+};
+};
 </script>
-<!--End of Tawk.to Script-->
 </body>
 </html>
