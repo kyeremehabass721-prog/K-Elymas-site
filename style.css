@@ -21,6 +21,13 @@ header p {
   margin-top: 5px;
   font-size: 18px;
 }
+/* Book descriptions under titles */
+.book-description {
+  font-size: 14px;       /* slightly smaller than title and price */
+  color: #444;           /* soft dark gray for readability */
+  margin: 5px 0 10px 0;  /* spacing above and below the description */
+  line-height: 1.5;      /* makes it easy to read on mobile */
+}
 
 /* Biography */
 .biography {
