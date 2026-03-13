@@ -152,3 +152,40 @@ footer {
     font-size: 16px;
   }
 }
+.book-image{
+position:relative;
+width:100%;
+}
+
+.book-image img{
+width:100%;
+display:block;
+border-radius:8px;
+}
+
+.book-info{
+position:absolute;
+bottom:0;
+left:0;
+right:0;
+background:rgba(0,0,0,0.6);
+color:white;
+padding:10px;
+border-radius:0 0 8px 8px;
+}
+
+.book-info h3{
+margin:0;
+font-size:16px;
+}
+
+.book-info .price{
+margin:2px 0;
+font-weight:bold;
+}
+
+.book-description{
+font-size:13px;
+margin:0;
+line-height:1.4;
+}
