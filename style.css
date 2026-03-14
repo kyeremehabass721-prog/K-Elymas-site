@@ -122,6 +122,11 @@ footer {
 
 /* Mobile Responsive */
 @media(max-width:600px){
+.payment-methods img{
+width:28px;
+height:auto;
+margin:0 4px;
+}
   .author-photo {
     width: 80px;           /* smaller on phone */
     height: 80px;
