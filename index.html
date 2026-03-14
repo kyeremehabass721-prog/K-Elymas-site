@@ -1,121 +1,191 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Kyeremeh Abass | Author</title>
+
 <link rel="stylesheet" href="style.css">
 
-<!-- SEO meta tags -->
-<meta name="description" content="Kyeremeh Abass – Ghanaian inspirational and Christian author. Discover his books on faith, purpose, and personal growth.">
-<meta name="keywords" content="Kyeremeh Abass, inspirational author, Christian books, Ghana author">
-<meta name="author" content="Kyeremeh Abass">
-
-<!-- Structured data for Google -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Kyeremeh Abass",
-  "url": "https://kyeremehabass721-prog.github.io/K-Elymas-site/",
-  "jobTitle": "Inspirational & Christian Author",
-  "description": "Kyeremeh Abass is a Ghanaian inspirational and Christian author focusing on faith, purpose, and personal growth."
-}
-</script>
-
 </head>
+
 <body>
 
 <header>
-  <h1>Kyeremeh Abass</h1>
-  <p>Inspirational & Christian Author</p>
+
+<h1>Kyeremeh Abass</h1>
+<p>Inspirational & Christian Author</p>
+
+<div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+<nav id="menu">
+
+<a href="#home">Home</a>
+<a href="#books">Books</a>
+<a href="#bible">Read Bible</a>
+<a href="#message">Message</a>
+
+</nav>
+
 </header>
 
-<section class="biography">
-  <h2>About the Author</h2>
-  <img src="images/author.jpg" alt="Kyeremeh Abass" class="author-photo">
-  <p>Kyeremeh Abass is a Ghanaian inspirational and Christian author whose writings focus on faith, purpose, and personal growth. Through his books, he inspires readers to discover their God-given purpose and pursue excellence in life.</p>
-  <p>Abass developed a passion for writing at an early age. His works encourage young people and readers worldwide to build strong faith, develop discipline, and live meaningful lives guided by purpose.</p>
+<section id="home" class="biography">
+
+<h2>About the Author</h2>
+
+<img src="images/author.jpg" class="author-photo">
+
+<p>Kyeremeh Abass is a Ghanaian inspirational and Christian author whose writings focus on faith, purpose and personal growth.</p>
+
 </section>
 
-<section class="education">
-  <h2>Educational Background</h2>
-  <div class="school">
-    <h3>Okomfo Anokye Senior High School</h3>
-    <p>Senior High School Education</p>
-    <span>Completed: 2025</span>
-  </div>
-  <div class="school">
-    <h3>Life Educational Complex</h3>
-    <p>Junior High School Education</p>
-    <span>Completed: 2022</span>
-  </div>
+<section class="biography">
+
+<h2>Daily Bible Verse</h2>
+
+<p id="verse">Loading verse...</p>
+
 </section>
-<section class="books">
-  <h2>Books</h2>
+
+<section id="books" class="books">
 
 <div class="book">
-  <div class="book-image">
-    <img src="images/savedbygrace.jpg" alt="Saved By Grace">
-    <div class="book-info">
-      <h3>Saved By Grace</h3>
-      <p class="price">GH₵30</p>
-      <p class="book-description">
-        A Christian inspirational book showing how God's grace transforms lives and gives hope.
-      </p>
-    </div>
-  </div>
-<a class="button" href="https://wa.me/233536782743?text=Hello%20I%20want%20to%20buy%20Saved%20By%20Grace%20for%20GH₵30">
+
+<img src="images/savedbygrace.jpg">
+
+<h3>Saved By Grace</h3>
+
+<p class="price">GH₵30</p>
+
+<p>A powerful Christian message about salvation through grace.</p>
+
+<a class="button" href="https://wa.me/233536782743">
 Buy with MoMo
-<img src="images/mtn.jpg">
-<img src="images/telecel.jpg">
-<img src="images/airteltigo.jpg">
 </a>
+
 </div>
 
- <div class="book">
-  <div class="book-image">
-    <img src="images/purpose.jpg" alt="When Purpose Meets Excellence">
-    <div class="book-info">
-      <h3>When Purpose Meets Excellence</h3>
-      <p class="price">GH₵40</p>
-      <p class="book-description">
-        Discover how purpose and excellence can transform your life and lead you to meaningful success.
-      </p>
-    </div>
-  </div>
-<a class="button" href="https://wa.me/233536782743?text=Hello%20I%20want%20to%20buy%20Saved%20By%20Grace%20for%20GH₵30">
+<div class="book">
+
+<img src="images/purpose.jpg">
+
+<h3>When Purpose Meets Excellence</h3>
+
+<p class="price">GH₵40</p>
+
+<p>Discover how purpose and excellence lead to success.</p>
+
+<a class="button" href="https://wa.me/233536782743">
 Buy with MoMo
-<img src="images/mtn.jpg">
-<img src="images/telecel.jpg">
-<img src="images/airteltigo.jpg">
 </a>
+
 </div>
 
 </section>
+
+<section id="bible" class="biography">
+
+<h2>Read the Bible</h2>
+
+<input id="searchBible" placeholder="Example: John 3:16">
+
+<button onclick="searchBible()">Search</button>
+
+<div id="bibleText"></div>
+
+</section>
+
+<section id="message" class="biography">
+
+<h2>Message</h2>
+
+<p>If you prefer not to chat with Elymas assistant you can contact the assistant manager.</p>
+
+<a class="button" href="https://wa.me/233534157964">
+Message Assistant Manager
+</a>
+
+</section>
+
+<div id="chatbox">
+
+<div class="chat-header">Elymas Assistant</div>
+
+<div id="chatMessages"></div>
+
+<input id="chatInput" placeholder="Ask Elymas...">
+
+<button onclick="sendMessage()">Send</button>
+
+</div>
+
 <footer>
-  <p>Contact: +233 536782743</p>
 
-  <div class="payment-methods">
-    <img src="images/mtn.jpg" alt="MTN MoMo">
-    <img src="images/telecel.jpg" alt="Telecel Cash">
-    <img src="images/airteltigo.jpg" alt="AirtelTigo Money">
-  </div>
+<p>© 2026 Kyeremeh Abass</p>
 
-  <p>© 2026 Kyeremeh Abass</p>
 </footer>
-<!--Start of Tawk.to Script-->
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/69b2dff1f070501c342ff7a6/1jjhblj57';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
+
+<script>
+
+function toggleMenu(){
+
+let menu=document.getElementById("menu");
+
+menu.classList.toggle("show");
+
+}
+
+fetch("https://bible-api.com/?random=verse")
+
+.then(res=>res.json())
+
+.then(data=>{
+
+document.getElementById("verse").innerText=data.reference+" - "+data.text;
+
+});
+
+function searchBible(){
+
+let q=document.getElementById("searchBible").value;
+
+fetch("https://bible-api.com/"+q)
+
+.then(res=>res.json())
+
+.then(data=>{
+
+let text="";
+
+data.verses.forEach(v=>{
+
+text+="<p>"+v.verse+" "+v.text+"</p>";
+
+});
+
+document.getElementById("bibleText").innerHTML=text;
+
+});
+
+}
+
+function sendMessage(){
+
+let input=document.getElementById("chatInput").value;
+
+let chat=document.getElementById("chatMessages");
+
+chat.innerHTML+="<p><b>You:</b> "+input+"</p>";
+
+chat.innerHTML+="<p><b>Elymas:</b> Thank you for your message. The manager will respond soon.</p>";
+
+document.getElementById("chatInput").value="";
+
+}
+
 </script>
-<!--End of Tawk.to Script-->
+
 </body>
 </html>
