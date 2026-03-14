@@ -153,3 +153,12 @@ margin-left:6px;
 vertical-align:middle;
 border-radius:3px;
 }
+.payment-methods{
+margin:15px 0;
+}
+
+.payment-methods img{
+width:45px;
+margin:0 8px;
+vertical-align:middle;
+}
