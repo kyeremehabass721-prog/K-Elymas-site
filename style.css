@@ -221,3 +221,106 @@ box-shadow:0 0 10px rgba(0,0,0,0.3);
 font-weight:bold;
 margin-bottom:10px;
 }
+.books{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:25px;
+max-width:1100px;
+margin:auto;
+padding:20px;
+}
+
+/* book card */
+
+.book{
+position:relative;
+overflow:hidden;
+border-radius:12px;
+box-shadow:0 6px 20px rgba(0,0,0,0.15);
+}
+
+/* book image */
+
+.book img{
+width:100%;
+display:block;
+border-radius:12px;
+}
+
+/* info on image */
+
+.book-info{
+position:absolute;
+bottom:0;
+left:0;
+right:0;
+background:linear-gradient(to top, rgba(0,0,0,0.85), rgba(0,0,0,0));
+color:white;
+padding:15px;
+text-align:left;
+}
+
+/* title */
+
+.book-info h3{
+margin:0;
+font-size:18px;
+font-weight:bold;
+}
+
+/* price */
+
+.book-info .price{
+color:#b89600;
+font-size:18px;
+font-weight:bold;
+margin-top:5px;
+}
+
+/* description */
+
+.book-info p{
+font-size:13px;
+margin:6px 0 10px 0;
+line-height:1.4;
+}
+
+/* momo button */
+
+.book-info .button{
+display:block;
+text-align:center;
+background:#ff7a00;
+color:white;
+padding:10px;
+border-radius:8px;
+text-decoration:none;
+font-weight:bold;
+}
+
+/* mobile */
+
+@media(max-width:800px){
+
+.books{
+grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+@media(max-width:500px){
+
+.books{
+grid-template-columns:repeat(2,1fr);
+gap:15px;
+}
+
+.book-info h3{
+font-size:15px;
+}
+
+.book-info p{
+font-size:12px;
+}
+
+}
