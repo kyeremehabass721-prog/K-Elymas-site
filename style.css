@@ -294,3 +294,20 @@ font-size:12px;
   display:block;
   margin-bottom:15px;
 }
+.book-info .price{
+color:#ff7a00 !important;
+font-size:18px;
+font-weight:bold;
+margin-top:5px;
+}
+
+.book-info .button{
+display:block;
+text-align:center;
+background:#ff7a00 !important;
+color:white !important;
+padding:12px;
+border-radius:8px;
+text-decoration:none;
+font-weight:bold;
+}
