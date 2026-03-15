@@ -126,12 +126,13 @@ margin:0 8px;
 vertical-align:middle;
 }
 .menu-toggle{
-display:none;
+position:absolute;
+left:20px;
+top:20px;
 font-size:28px;
 color:white;
 cursor:pointer;
 }
-
 #menu{
 display:flex;
 justify-content:center;
