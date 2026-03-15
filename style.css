@@ -233,10 +233,11 @@ font-weight:bold;
 
 /* price */
 
-.book-info .price{
-color:#ff7a00;
+.price{
+color:#ff7a00 !important;
 font-size:18px;
 font-weight:bold;
+margin:10px 0;
 }
 
 /* description */
