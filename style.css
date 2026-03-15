@@ -304,3 +304,45 @@ font-weight:bold;
 #menu a:hover{
 background:rgba(255,255,255,0.1);
 }
+  /* Education Section */
+.education{
+  max-width:900px;
+  margin:40px auto;
+  padding:20px;
+}
+
+.education h2{
+  text-align:center;
+  margin-bottom:20px;
+}
+
+/* School Card */
+.school{
+  background:white;
+  padding:20px;
+  margin-bottom:20px;
+  border-top:4px solid orange;
+  border-bottom:4px solid orange;
+  border-left:0;
+  border-right:0;
+  box-shadow:0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Topic (JUNIOR / SENIOR) */
+.level{
+  color:black;
+  margin:0 0 10px 0;
+}
+
+/* School Name */
+.school-name{
+  color:purple;
+  font-weight:bold;
+  margin:0 0 8px 0;
+}
+
+/* Year */
+.school span{
+  color:orange;
+  font-weight:bold;
+}
