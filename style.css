@@ -312,3 +312,9 @@ border-radius:8px;
 text-decoration:none;
 font-weight:bold;
 }
+.price{
+color:#ff7a00;
+font-size:18px;
+font-weight:bold;
+margin:10px 0;
+}
