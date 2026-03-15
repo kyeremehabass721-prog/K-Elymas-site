@@ -69,12 +69,10 @@ header p {
 }
 
 /* Books */
-..books {
-  max-width: 600px;
-  margin: 30px auto;
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
+.books{
+  max-width:600px;
+  margin:30px auto;
+  display:block;
 }
 
 .book {
