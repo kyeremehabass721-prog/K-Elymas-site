@@ -107,12 +107,14 @@ margin:0 4px;
     font-size: 16px;
   }
 }
-.button img{
-width:20px;
-height:20px;
-margin-left:6px;
-vertical-align:middle;
-border-radius:3px;
+.button{
+display:inline-block;
+background:#ff7a00;
+color:white !important;
+padding:12px 15px;
+border-radius:8px;
+text-decoration:none;
+font-weight:bold;
 }
 .payment-methods{
 margin:15px 0;
