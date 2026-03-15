@@ -149,7 +149,12 @@ font-weight:bold;
 @media(max-width:600px){
 
 .menu-toggle{
-display:block;
+position:absolute;
+left:20px;
+top:20px;
+font-size:28px;
+color:white;
+cursor:pointer;
 }
 
 #menu{
@@ -362,4 +367,21 @@ z-index:900;
 
 #overlay.show{
 display:block;
+}
+#menu{
+display:none;
+flex-direction:column;
+background:#4b0082;
+padding:10px;
+}
+
+#menu.show{
+display:flex;
+}
+
+#menu a{
+color:white;
+text-decoration:none;
+padding:10px;
+font-weight:bold;
 }
