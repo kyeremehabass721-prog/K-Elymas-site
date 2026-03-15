@@ -185,6 +185,12 @@ document.getElementById("bibleText").innerHTML=text;
 <script>
 function toggleMenu(){
   document.getElementById("menu").classList.toggle("show");
+  document.getElementById("overlay").classList.toggle("show");
+}
+
+document.getElementById("overlay").onclick=function(){
+  document.getElementById("menu").classList.remove("show");
+  document.getElementById("overlay").classList.remove("show");
 }
 </script>
 </body>
