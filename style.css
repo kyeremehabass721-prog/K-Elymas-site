@@ -7,11 +7,11 @@ body {
 }
 
 /* Header */
-  header {
-  background: #4b0082;
-  color: white;
-  padding: 40px 20px;
-  position: relative;
+  header{
+background:#4b0082;
+color:white;
+padding:40px 20px;
+position:relative;
 }
 header h1 {
   margin: 0;
@@ -345,4 +345,13 @@ background:rgba(255,255,255,0.1);
 .school span{
   color:orange;
   font-weight:bold;
+}
+  /* Menu Button */
+.menu-toggle{
+position:absolute;
+left:10px;
+top:15px;
+font-size:28px;
+color:white;
+cursor:pointer;
 }
