@@ -8,7 +8,7 @@ body {
 
 /* Header */
   header{
-background:#4b0082;
+background:linear-gradient(135deg, #4b0082, #7b1fa2, #ff7a00);
 color:white;
 padding:40px 20px;
 position:relative;
