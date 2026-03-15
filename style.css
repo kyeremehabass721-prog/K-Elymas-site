@@ -125,49 +125,6 @@ width:45px;
 margin:0 8px;
 vertical-align:middle;
 }
-.menu-toggle{
-position:absolute;
-left:20px;
-top:20px;
-font-size:28px;
-color:white;
-cursor:pointer;
-}
-#menu{
-display:flex;
-justify-content:center;
-gap:20px;
-margin-top:10px;
-}
-
-#menu a{
-color:white;
-text-decoration:none;
-font-weight:bold;
-}
-
-@media(max-width:600px){
-
-.menu-toggle{
-position:absolute;
-left:20px;
-top:20px;
-font-size:28px;
-color:white;
-cursor:pointer;
-}
-
-#menu{
-display:none;
-flex-direction:column;
-background:#4b0082;
-padding:10px;
-}
-
-#menu.show{
-display:flex;
-}
-
 }
 
 #chatbox{
@@ -325,63 +282,25 @@ font-size:18px;
 font-weight:bold;
 margin:10px 0;
 }
- /* Sliding Menu */
+ /* Normal Menu */
 #menu{
-position:fixed;
-top:0;
-left:-250px;
-width:250px;
-height:100%;
-background:#4b0082;
+display:none;
 flex-direction:column;
-padding-top:70px;
-transition:0.3s ease;
-z-index:1000;
+background:#4b0082;
+padding:10px;
+}
+
+#menu.show{
 display:flex;
 }
 
 #menu a{
 color:white;
-padding:15px 20px;
 text-decoration:none;
+padding:10px;
 font-weight:bold;
 }
 
 #menu a:hover{
 background:rgba(255,255,255,0.1);
-}
-
-#menu.show{
-left:0;
-  } 
-  #overlay{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,0.4);
-display:none;
-z-index:900;
-}
-
-#overlay.show{
-display:block;
-}
-#menu{
-display:none;
-flex-direction:column;
-background:#4b0082;
-padding:10px;
-}
-
-#menu.show{
-display:flex;
-}
-
-#menu a{
-color:white;
-text-decoration:none;
-padding:10px;
-font-weight:bold;
 }
