@@ -205,20 +205,6 @@ document.getElementById("bibleText").innerHTML=text;
 
 }
 
-function sendMessage(){
-
-let input=document.getElementById("chatInput").value;
-
-let chat=document.getElementById("chatMessages");
-
-chat.innerHTML+="<p><b>You:</b> "+input+"</p>";
-
-chat.innerHTML+="<p><b>Elymas:</b> Thank you for your message. The manager will respond soon.</p>";
-
-document.getElementById("chatInput").value="";
-
-}
-
 </script>
 <script>
 (function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="kD7EM6DkZg-59YEqXBrV4";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
