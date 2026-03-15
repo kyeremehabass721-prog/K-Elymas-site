@@ -320,3 +320,32 @@ font-size:18px;
 font-weight:bold;
 margin:10px 0;
 }
+ /* Sliding Menu */
+#menu{
+position:fixed;
+top:0;
+left:-250px;
+width:250px;
+height:100%;
+background:#4b0082;
+flex-direction:column;
+padding-top:70px;
+transition:0.3s ease;
+z-index:1000;
+display:flex;
+}
+
+#menu a{
+color:white;
+padding:15px 20px;
+text-decoration:none;
+font-weight:bold;
+}
+
+#menu a:hover{
+background:rgba(255,255,255,0.1);
+}
+
+#menu.show{
+left:0;
+  } 
