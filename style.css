@@ -146,14 +146,14 @@ header p {
 }
 
 .price{
-  color:orange;
+  color:#ff7a00;
   font-weight:bold;
   font-size:18px;
 }
 
 .button{
   display:block;
-  background:orange;
+  background:#ff7a00;
   color:white !important;
   padding:10px;
   text-align:center;
