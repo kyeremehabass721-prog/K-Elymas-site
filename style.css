@@ -117,13 +117,17 @@ text-decoration:none;
 font-weight:bold;
 }
 .payment-methods{
-margin:15px 0;
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin:20px 0;
+padding:0 20px;
 }
 
 .payment-methods img{
-width:45px;
-margin:0 8px;
-vertical-align:middle;
+width:40px;
+height:40px;
+object-fit:contain;
 }
 }
 
