@@ -146,22 +146,20 @@ header p {
 }
 
 .price{
-  color:#ff7a00;
-  font-weight:bold;
-  font-size:18px;
+color:#ff7a00 !important;
+font-weight:bold;
+font-size:18px;
 }
 
 .button{
-  display:block;
-  background:#ff7a00;
-  color:white !important;
-  padding:10px;
-  text-align:center;
-  text-decoration:none;
-  border-radius:8px;
-  margin-top:10px;
+display:inline-block;
+background:#ff7a00 !important;
+color:white !important;
+padding:12px 15px;
+border-radius:8px;
+text-decoration:none;
+font-weight:bold;
 }
-
 /* Bible Section */
 #bible{
   margin-bottom:40px;
