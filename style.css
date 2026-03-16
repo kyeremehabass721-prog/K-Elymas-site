@@ -7,12 +7,13 @@ body {
 }
 
 /* Header */
-  header{
-background:linear-gradient(135deg, #4b0082, #7b1fa2, #ff7a00);
-color:white;
-padding:40px 20px;
-position:relative;
+header{
+  background:linear-gradient(135deg, #4b0082, #7b1fa2, #ff7a00);
+  color:white;
+  padding:40px 20px;
+  position:relative;
 }
+
 header h1 {
   margin: 0;
   font-size: 32px;
@@ -21,6 +22,39 @@ header h1 {
 header p {
   margin-top: 5px;
   font-size: 18px;
+}
+
+/* Menu Button */
+.menu-toggle{
+  position:absolute;
+  left:10px;
+  top:15px;
+  font-size:28px;
+  color:white;
+  cursor:pointer;
+}
+
+/* Normal Menu */
+#menu{
+  display:none;
+  flex-direction:column;
+  background:#4b0082;
+  padding:10px;
+}
+
+#menu.show{
+  display:flex;
+}
+
+#menu a{
+  color:white;
+  text-decoration:none;
+  padding:10px;
+  font-weight:bold;
+}
+
+#menu a:hover{
+  background:rgba(255,255,255,0.1);
 }
 
 /* Biography */
@@ -35,345 +69,50 @@ header p {
   overflow: hidden;
 }
 
-/* Author photo small circle on left */
+/* Author Photo */
 .author-photo {
-  width: 100px;          /* small circular size */
+  width: 100px;
   height: 100px;
-  object-fit: cover;      /* face fully visible */
-  border-radius: 50%;     /* circle */
-  float: left;            /* left of text */
+  object-fit: cover;
+  border-radius: 50%;
+  float: left;
   margin-right: 15px;
   margin-bottom: 15px;
-  border: 2px solid #4b0082; /* optional border */
+  border: 2px solid #4b0082;
 }
 
 /* Education */
-.education {
-  max-width: 900px;
-  margin: 30px auto;
-  text-align: left;
-}
-
-.school {
-  background: white;
-  margin: 15px 0;
-  padding: 20px;
-  border-left: 6px solid #4b0082;
-  border-radius: 10px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-}
-
-.school span {
-  color: #4b0082;
-  font-weight: bold;
-}
-
-/* Footer */
-footer {
-  background: #111;
-  color: white;
-  padding: 20px;
-  margin-top: 40px;
-}
-
-/* Mobile Responsive */
-@media(max-width:600px){
-.payment-methods img{
-width:28px;
-height:auto;
-margin:0 4px;
-}
-  .author-photo {
-    width: 80px;           /* smaller on phone */
-    height: 80px;
-    float: left;           /* stays on left */
-    margin-right: 10px;
-    margin-bottom: 10px;
-  }
-
-  .biography p {
-    font-size: 14px;       /* smaller text for mobile */
-  }
-
-  .book img {
-    max-width: 100%;
-  }
-
-  header h1 {
-    font-size: 26px;
-  }
-
-  header p {
-    font-size: 16px;
-  }
-}
-.button{
-display:inline-block;
-background:#ff7a00;
-color:white !important;
-padding:12px 15px;
-border-radius:8px;
-text-decoration:none;
-font-weight:bold;
-}
-.payment-methods{
-display:flex;
-justify-content:space-between;
-align-items:center;
-margin:20px 0;
-padding:0 20px;
-}
-
-.payment-methods img{
-width:40px;
-height:40px;
-object-fit:contain;
-}
-}
-
-#chatbox{
-position:fixed;
-bottom:20px;
-right:20px;
-width:250px;
-background:white;
-padding:10px;
-border-radius:10px;
-box-shadow:0 0 10px rgba(0,0,0,0.3);
-}
-
-.chat-header{
-font-weight:bold;
-margin-bottom:10px;
-}
-.books{
-max-width:700px;
-margin:30px auto;
-display:block;
-}
-
-.book{
-background:white;
-margin-bottom:30px;
-border-radius:12px;
-box-shadow:0 6px 20px rgba(0,0,0,0.15);
-overflow:hidden;
-}
-
-/* book card */
-
-.book{
-position:relative;
-overflow:hidden;
-border-radius:12px;
-box-shadow:0 6px 20px rgba(0,0,0,0.15);
-}
-
-/* book image */
-
-.book img{
-width:100%;
-display:block;
-border-radius:12px;
-}
-
-/* info on image */
-
-.book-info{
-position:absolute;
-bottom:0;
-left:0;
-right:0;
-background:linear-gradient(to top, rgba(0,0,0,0.85), rgba(0,0,0,0));
-color:white;
-padding:15px;
-text-align:left;
-}
-
-/* title */
-
-.book-info h3{
-margin:0;
-font-size:18px;
-font-weight:bold;
-}
-
-/* price */
-
-.price{
-color:#ff7a00 !important;
-font-size:18px;
-font-weight:bold;
-margin:10px 0;
-}
-
-/* description */
-
-.book-info p{
-font-size:13px;
-margin:6px 0 10px 0;
-line-height:1.4;
-}
-
-/* momo button */
-
-.book-info .button{
-display:block;
-text-align:center;
-background:#ff7a00;
-color:white;
-padding:10px;
-border-radius:8px;
-text-decoration:none;
-font-weight:bold;
-}
-
-/* mobile */
-
-@media(max-width:800px){
-
-}
-
-@media(max-width:500px){
-
-.book-info h3{
-font-size:15px;
-}
-
-.book-info p{
-font-size:12px;
-}
-.books{
-  max-width:600px;
-  margin:30px auto;
-}
-
-.book{
-  background:white;
-  margin-bottom:25px;
-  padding:20px;
-  border-radius:12px;
-  box-shadow:0 4px 15px rgba(0,0,0,0.1);
-  display:block;
-}
-
-.book img{
-  width:100%;
-  height:auto;
-  display:block;
-  margin-bottom:15px;
-}
-.book-info .price{
-color:#ff7a00 !important;
-font-size:18px;
-font-weight:bold;
-margin-top:5px;
-}
-
-.book-info .button{
-display:block;
-text-align:center;
-background:#ff7a00 !important;
-color:white !important;
-padding:12px;
-border-radius:8px;
-text-decoration:none;
-font-weight:bold;
-}
-.price{
-color:#ff7a00;
-font-size:18px;
-font-weight:bold;
-margin:10px 0;
-}
- /* Normal Menu */
-#menu{
-display:none;
-flex-direction:column;
-background:#4b0082;
-padding:10px;
-}
-
-#menu.show{
-display:flex;
-}
-
-#menu a{
-color:white;
-text-decoration:none;
-padding:10px;
-font-weight:bold;
-}
-
-#menu a:hover{
-background:rgba(255,255,255,0.1);
-}
-  /* Education Section */
 .education{
   max-width:900px;
   margin:40px auto;
   padding:20px;
 }
 
-.education h2{
-  text-align:center;
-  margin-bottom:20px;
-}
-
-/* School Card */
 .school{
   background:white;
   padding:20px;
   margin-bottom:20px;
   border-top:4px solid orange;
   border-bottom:4px solid orange;
-  border-left:0;
-  border-right:0;
   box-shadow:0 4px 12px rgba(0,0,0,0.1);
 }
 
-/* Topic (JUNIOR / SENIOR) */
 .level{
   color:black;
   margin:0 0 10px 0;
 }
 
-/* School Name */
 .school-name{
   color:purple;
   font-weight:bold;
   margin:0 0 8px 0;
 }
 
-/* Year */
 .school span{
   color:orange;
   font-weight:bold;
 }
-  /* Menu Button */
-.menu-toggle{
-position:absolute;
-left:10px;
-top:15px;
-font-size:28px;
-color:white;
-cursor:pointer;
-}
-  .elymas-assistant{
-display:none;
-  }
-section{
-  margin-bottom:40px;
-}
-/* FIX SECTION OVERLAP */
-section{
-  position: relative;
-  z-index: 1;
-}
-  #bible{
-  margin-bottom:40px;
-  }
-  
+
 /* BOOKS SECTION */
 .books{
   display:grid;
@@ -384,7 +123,6 @@ section{
   padding:20px;
 }
 
-/* BOOK CARD */
 .book{
   background:white;
   border-radius:12px;
@@ -392,39 +130,79 @@ section{
   box-shadow:0 5px 20px rgba(0,0,0,0.1);
 }
 
-/* BOOK IMAGE */
 .book img{
   width:100%;
   height:300px;
   object-fit:cover;
 }
 
-/* BOOK INFO */
 .book-info{
   padding:15px;
   text-align:left;
 }
 
-/* TITLE */
 .book-info h3{
   margin:0;
 }
 
-/* PRICE (ORANGE) */
 .price{
   color:orange;
   font-weight:bold;
   font-size:18px;
 }
 
-/* BUTTON */
 .button{
   display:block;
   background:orange;
-  color:white;
+  color:white !important;
   padding:10px;
   text-align:center;
   text-decoration:none;
   border-radius:8px;
   margin-top:10px;
+}
+
+/* Bible Section */
+#bible{
+  margin-bottom:40px;
+}
+
+/* Footer */
+footer {
+  background: #111;
+  color: white;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+.payment-methods{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin:20px 0;
+  padding:0 20px;
+}
+
+.payment-methods img{
+  width:40px;
+  height:40px;
+  object-fit:contain;
+}
+
+/* Mobile */
+@media(max-width:600px){
+
+  .author-photo{
+    width:80px;
+    height:80px;
+  }
+
+  header h1{
+    font-size:26px;
+  }
+
+  header p{
+    font-size:16px;
+  }
+
 }
