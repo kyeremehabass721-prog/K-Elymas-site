@@ -365,3 +365,8 @@ display:none;
 section{
   margin-bottom:40px;
 }
+/* FIX SECTION OVERLAP */
+section{
+  position: relative;
+  z-index: 1;
+}
