@@ -362,3 +362,6 @@ cursor:pointer;
   .elymas-assistant{
 display:none;
   }
+section{
+  margin-bottom:40px;
+}
