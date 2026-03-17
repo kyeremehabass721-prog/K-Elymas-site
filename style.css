@@ -4,33 +4,28 @@ body {
   margin: 0;
   background: #f5f6fa;
   text-align: center;
+  padding-top: 120px; /* keeps welcome bar space */
 }
 
-/* Header */
+/* HEADER */
 header{
   background:linear-gradient(135deg, #4b0082, #7b1fa2, #ff7a00);
   color:white;
-  padding:20px 20px;  /* reduced from 40px */
-  position:relative;
-}
-header{
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-}
-header{
-  transition: all 0.3s ease;
-header{
-  transition: all 0.3s ease;
+  padding:20px 20px;
+  position:sticky;
+  top:0;
+  z-index:1000;
+  box-shadow:0 4px 10px rgba(0,0,0,0.2);
+  transition:all 0.3s ease;
 }
 
+/* When scrolling */
 header.scrolled{
-  background:#2c003e; /* new color when scrolling */
+  background:#2c003e;
   padding:15px 20px;
   box-shadow:0 4px 10px rgba(0,0,0,0.3);
 }
-}
+
 header h1 {
   margin: 0;
   font-size: 32px;
@@ -131,7 +126,6 @@ header p {
 }
 
 /* BOOKS SECTION */
-/* BOOKS GRID */
 .books{
   display:grid;
   grid-template-columns:repeat(2, 1fr);
@@ -141,23 +135,26 @@ header p {
   padding:10px;
 }
 
-/* EACH BOOK */
 .book{
   background:white;
   border-radius:12px;
   overflow:hidden;
   box-shadow:0 4px 15px rgba(0,0,0,0.1);
   position:relative;
+  transition:transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* IMAGE */
+.book:hover{
+  transform:translateY(-8px);
+  box-shadow:0 12px 30px rgba(0,0,0,0.2);
+}
+
 .book img{
   width:100%;
   height:auto;
   display:block;
 }
 
-/* TEXT AREA */
 .book-info{
   position:absolute;
   bottom:0;
@@ -169,7 +166,6 @@ header p {
   text-align:left;
 }
 
-/* TITLE */
 .book-info h3{
   font-size:14px;
   margin:0;
@@ -180,7 +176,6 @@ header p {
   margin:5px 0;
 }
 
-/* PRICE */
 .price{
   color:#ff7a00;
   font-weight:bold;
@@ -189,58 +184,16 @@ header p {
 }
 
 .button{
-display:inline-block;
-background:#ff7a00 !important;
-color:white !important;
-padding:12px 15px;
-border-radius:8px;
-text-decoration:none;
-font-weight:bold;
-}
-/* Bible Section */
-#bible{
-  margin-bottom:40px;
+  display:inline-block;
+  background:#ff7a00 !important;
+  color:white !important;
+  padding:12px 15px;
+  border-radius:8px;
+  text-decoration:none;
+  font-weight:bold;
 }
 
-/* Footer */
-footer {
-  background: #111;
-  color: white;
-  padding: 20px;
-  margin-top: 40px;
-}
-
-.payment-methods{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  margin:20px 0;
-  padding:0 20px;
-}
-
-.payment-methods img{
-  width:40px;
-  height:40px;
-  object-fit:contain;
-}
-
-/* Mobile */
-@media(max-width:600px){
-
-  .author-photo{
-    width:80px;
-    height:80px;
-  }
-
-  header h1{
-    font-size:26px;
-  }
-
-  header p{
-    font-size:16px;
-  }
-
-/* WELCOME SCROLL BAR */
+/* WELCOME BAR */
 .welcome-bar{
   width:100%;
   background:#ff7a00;
@@ -248,12 +201,12 @@ footer {
   overflow:hidden;
   padding:6px 0;
   font-size:14px;
+  position:fixed;
+  top:80px;
+  left:0;
+  z-index:999;
 }
-#welcome{
-  position: sticky;
-  top: 70px; /* adjust depending on header height */
-  z-index: 999;
-}
+
 .scroll-text{
   display:inline-block;
   white-space:nowrap;
@@ -261,90 +214,14 @@ footer {
 }
 
 @keyframes scrollLeft{
-  from{
-    transform:translateX(100%);
-  }
-  to{
-    transform:translateX(-100%);
-  }
-}
-.logo h1{
-  margin:0;
-  font-size:34px;
-  letter-spacing:2px;
-  font-weight:900;
+  from{ transform:translateX(100%); }
+  to{ transform:translateX(-100%); }
 }
 
-.logo p{
-  margin-top:8px;
-  font-size:16px;
-  opacity:0.9;
-  }
-  /* Smooth animation */
-.book{
-  transition:transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* When hovering */
-.book:hover{
-  transform:translateY(-8px);
-  box-shadow:0 12px 30px rgba(0,0,0,0.2);
-}
-/* Badges */
-.badges{
-  position:absolute;
-  top:5px;     /* move higher */
-  left:5px;    /* move slightly left */
-  display:flex;
-  gap:6px;
-  z-index:2;
-}
-
-.hot{
-  font-size:10px;
-  padding:3px 6px;
-}
-
-.heart{
-  font-size:12px;
-  padding:3px 5px;
-}
-
-/* Make whole book clickable */
-.book-link{
-  text-decoration:none;
-  color:inherit;
-  display:block;
-}
-
-/* Book hover animation */
-.book{
-  position:relative;
-  transition:transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.book:hover{
-  transform:translateY(-8px);
-  box-shadow:0 12px 30px rgba(0,0,0,0.2);
-}
-.heart{
-  background:white;
-  color:red;
-  padding:5px 7px;
-  font-size:14px;
-  border-radius:50%;
-  cursor:pointer;
-  transition:0.3s;
-}
-
-.heart.liked{
-  background:red;
-  color:white;
-  transform:scale(1.2);
-}
+/* WhatsApp Button */
 .whatsapp-float{
   position:fixed;
-  bottom:90px;   /* moved UP */
+  bottom:90px;
   right:20px;
   background:#25D366;
   color:white;
@@ -359,52 +236,28 @@ footer {
   box-shadow:0 4px 12px rgba(0,0,0,0.3);
   z-index:9999;
 }
-.shop-line{
-  display:block;
-  margin-left:30px; /* pushes it slightly to the right */
-}
-/* LOGO STYLE HEADER */
-.logo{
-  margin:0;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  line-height:1.1;
-  font-weight:bold;
-  text-transform:uppercase;
+
+/* Footer */
+footer {
+  background: #111;
+  color: white;
+  padding: 20px;
+  margin-top: 40px;
 }
 
-/* Top Line */
-.logo-top{
-  font-size:22px;
-  letter-spacing:2px;
-}
+/* Mobile */
+@media(max-width:600px){
 
-/* Bottom Line */
-.logo-bottom{
-  font-size:28px;
-  color:#ff7a00;   /* Orange to match your buttons */
-  letter-spacing:3px;
-}
- .logo-bottom{
-  font-size:28px;
-  color:#ff7a00;
-  letter-spacing:3px;
-  text-shadow:0 2px 5px rgba(0,0,0,0.2);
-} 
-/* When page is scrolled */
-header.scrolled{
-  padding:15px 20px;
-  box-shadow:0 4px 10px rgba(0,0,0,0.3);
-}
-.welcome-bar{
-  position: fixed;
-  top: 80px;
-  left: 0;
-  width: 100%;
-  z-index: 999;
-}
+  header h1{
+    font-size:26px;
+  }
 
-body{
-  padding-top: 120px;
+  header p{
+    font-size:16px;
+  }
+
+  .author-photo{
+    width:80px;
+    height:80px;
+  }
 }
