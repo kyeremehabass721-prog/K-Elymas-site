@@ -204,18 +204,19 @@ footer {
   }
 
 /* WELCOME SCROLL BAR */
-.welcome-bar{
-width:100%;
-overflow:hidden;
-background:#ff7a00;
-color:white;
-padding:5px 0;   /* reduced height */
-font-size:14px;  /* smaller text */
-}
-
 .welcome-bar p{
 display:inline-block;
 white-space:nowrap;
-animation:scrollText 12s linear infinite;
+padding-left:100%; /* makes it start off-screen */
+animation:scrollText 20s linear infinite;
 margin:0;
+}
+
+@keyframes scrollText{
+0%{
+transform:translateX(0);
+}
+100%{
+transform:translateX(-100%);
+}
 }
