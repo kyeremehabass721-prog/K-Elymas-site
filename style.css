@@ -264,3 +264,8 @@ footer {
 body{
   padding-top:120px;
 }
+.payment-methods img{
+  width:40px !important;
+  height:40px !important;
+  object-fit:contain;
+}
