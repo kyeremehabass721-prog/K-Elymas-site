@@ -397,3 +397,14 @@ header.scrolled{
   padding:15px 20px;
   box-shadow:0 4px 10px rgba(0,0,0,0.3);
 }
+.welcome-bar{
+  position: fixed;
+  top: 80px;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+body{
+  padding-top: 120px;
+}
