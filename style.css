@@ -323,7 +323,7 @@ footer {
 }
 .whatsapp-float{
   position:fixed;
-  bottom:20px;
+  bottom:90px;   /* moved UP */
   right:20px;
   background:#25D366;
   color:white;
@@ -336,5 +336,5 @@ footer {
   border-radius:50%;
   text-decoration:none;
   box-shadow:0 4px 12px rgba(0,0,0,0.3);
-  z-index:9999; /* VERY IMPORTANT */
+  z-index:9999;
 }
