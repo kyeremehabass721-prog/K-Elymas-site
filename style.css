@@ -263,3 +263,12 @@ footer {
   height:40px !important;
   object-fit:contain;
 }
+.heart{
+  cursor: pointer;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.heart.liked{
+  color: red;
+}
