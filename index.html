@@ -242,5 +242,16 @@ function toggleHeart(el){
 <a href="https://wa.me/233536782743" target="_blank" class="whatsapp-float">
   💬
 </a>
+<script>
+window.addEventListener("scroll", function(){
+  const header = document.querySelector("header");
+
+  if(window.scrollY > 50){
+    header.classList.add("scrolled");
+  } else {
+    header.classList.remove("scrolled");
+  }
+});
+</script>
 </body>
 </html>
