@@ -4,7 +4,6 @@ body {
   margin: 0;
   background: #f5f6fa;
   text-align: center;
-  padding-top: 120px; /* keeps welcome bar space */
 }
 
 /* HEADER */
@@ -258,9 +257,6 @@ footer {
     width:80px;
     height:80px;
   }
-}
-body{
-  padding-top:120px;
 }
 .payment-methods img{
   width:40px !important;
