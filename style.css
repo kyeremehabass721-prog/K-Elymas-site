@@ -306,3 +306,18 @@ footer {
   transform:translateY(-8px);
   box-shadow:0 12px 30px rgba(0,0,0,0.2);
 }
+.heart{
+  background:white;
+  color:red;
+  padding:5px 7px;
+  font-size:14px;
+  border-radius:50%;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.heart.liked{
+  background:red;
+  color:white;
+  transform:scale(1.2);
+}
