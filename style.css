@@ -21,6 +21,15 @@ header{
 }
 header{
   transition: all 0.3s ease;
+header{
+  transition: all 0.3s ease;
+}
+
+header.scrolled{
+  background:#2c003e; /* new color when scrolling */
+  padding:15px 20px;
+  box-shadow:0 4px 10px rgba(0,0,0,0.3);
+}
 }
 header h1 {
   margin: 0;
