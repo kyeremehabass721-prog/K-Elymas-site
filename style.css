@@ -136,8 +136,9 @@ header p {
 /* IMAGE */
 .book img{
   width:100%;
-  height:auto;
-  display:block;
+  height:220px;        /* control height */
+  object-fit:contain;  /* VERY IMPORTANT */
+  background:#fff;     /* clean space if image doesn't fill */
 }
 
 /* TEXT AREA */
