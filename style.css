@@ -205,25 +205,17 @@ footer {
 
 /* WELCOME SCROLL BAR */
 .welcome-bar{
-  width:100%;
-  overflow:hidden;
-  background:#ff7a00;
-  color:white;
-  padding:10px 0;
+width:100%;
+overflow:hidden;
+background:#ff7a00;
+color:white;
+padding:5px 0;   /* reduced height */
+font-size:14px;  /* smaller text */
 }
 
 .welcome-bar p{
-  display:inline-block;
-  white-space:nowrap;
-  animation:scrollText 15s linear infinite;
-  font-weight:bold;
-}
-
-@keyframes scrollText{
-  0%{
-    transform:translateX(100%);
-  }
-  100%{
-    transform:translateX(-100%);
-  }
+display:inline-block;
+white-space:nowrap;
+animation:scrollText 12s linear infinite;
+margin:0;
 }
