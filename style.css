@@ -379,4 +379,8 @@ footer {
   letter-spacing:3px;
   text-shadow:0 2px 5px rgba(0,0,0,0.2);
 } 
-
+/* When page is scrolled */
+header.scrolled{
+  padding:15px 20px;
+  box-shadow:0 4px 10px rgba(0,0,0,0.3);
+}
