@@ -114,42 +114,50 @@ header p {
 }
 
 /* BOOKS SECTION */
+/* BOOKS GRID */
 .books{
-display:grid;
-grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
-gap:20px;
-max-width:1000px;
-margin:40px auto;
-padding:10px;
+  display:grid;
+  grid-template-columns:repeat(2, 1fr);
+  gap:15px;
+  max-width:700px;
+  margin:30px auto;
+  padding:10px;
 }
 
+/* EACH BOOK */
 .book{
   background:white;
   border-radius:12px;
   overflow:hidden;
-  box-shadow:0 5px 20px rgba(0,0,0,0.1);
+  box-shadow:0 4px 15px rgba(0,0,0,0.1);
+  position:relative;
 }
 
+/* IMAGE */
 .book img{
   width:100%;
-  height:auto;      /* make full height of image visible */
+  height:auto;
   display:block;
-  border-radius:12px;
 }
 
+/* TEXT AREA */
 .book-info{
-  padding:15px;
+  padding:10px;
   text-align:left;
 }
 
+/* TITLE */
 .book-info h3{
+  font-size:14px;
   margin:0;
 }
 
+/* PRICE */
 .price{
-color:#ff7a00 !important;
-font-weight:bold;
-font-size:18px;
+  color:#ff7a00;
+  font-weight:bold;
+  font-size:16px;
+  margin:5px 0;
 }
 
 .button{
