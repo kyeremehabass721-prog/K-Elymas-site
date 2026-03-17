@@ -227,3 +227,25 @@ footer {
     transform:translateX(-100%);
   }
 }
+.logo h1{
+  margin:0;
+  font-size:34px;
+  letter-spacing:2px;
+  font-weight:900;
+}
+
+.logo p{
+  margin-top:8px;
+  font-size:16px;
+  opacity:0.9;
+  }
+  /* Smooth animation */
+.book{
+  transition:transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* When hovering */
+.book:hover{
+  transform:translateY(-8px);
+  box-shadow:0 12px 30px rgba(0,0,0,0.2);
+}
