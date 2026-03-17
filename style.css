@@ -204,19 +204,28 @@ footer {
   }
 
 /* WELCOME SCROLL BAR */
-.welcome-bar p{
-display:inline-block;
-white-space:nowrap;
-padding-left:100%; /* makes it start off-screen */
-animation:scrollText 20s linear infinite;
-margin:0;
+.welcome-bar{
+  width:100%;
+  overflow:hidden;
+  background:#ff7a00;
+  color:white;
+  padding:6px 0;
+  font-size:14px;
 }
 
-@keyframes scrollText{
-0%{
-transform:translateX(0);
+.welcome-bar p{
+  display:inline-block;
+  white-space:nowrap;
+  margin:0;
+  padding-left:100%;
+  animation:moveText 18s linear infinite;
 }
-100%{
-transform:translateX(-100%);
-}
+
+@keyframes moveText{
+  from{
+    transform:translateX(0);
+  }
+  to{
+    transform:translateX(-100%);
+  }
 }
