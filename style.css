@@ -258,10 +258,18 @@ footer {
     height:80px;
   }
 }
+.payment-methods{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 300px;
+  margin: 10px auto;
+}
+
 .payment-methods img{
-  width:40px !important;
-  height:40px !important;
-  object-fit:contain;
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
 }
 .heart{
   cursor: pointer;
