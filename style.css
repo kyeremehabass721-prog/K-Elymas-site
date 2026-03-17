@@ -271,14 +271,6 @@ footer {
   height: 40px;
   object-fit: contain;
 }
-.heart{
-  cursor: pointer;
-  font-size: 18px;
-  transition: 0.3s;
-}
-
-.heart.liked{
-  color: red;
 }
 .heart{
   cursor:pointer;
@@ -300,7 +292,6 @@ footer {
 
 .logo{
   text-align: center;
-  line-height: 1.2;
 }
 
 .logo-top{
@@ -309,4 +300,5 @@ footer {
 
 .logo-bottom{
   display: block;
+  margin-left: 25px; /* This pushes 📚SHOP slightly to the right */
 }
