@@ -249,7 +249,11 @@ footer {
   padding:6px 0;
   font-size:14px;
 }
-
+#welcome{
+  position: sticky;
+  top: 70px; /* adjust depending on header height */
+  z-index: 999;
+}
 .scroll-text{
   display:inline-block;
   white-space:nowrap;
