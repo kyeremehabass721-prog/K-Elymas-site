@@ -195,16 +195,14 @@ header p {
 
 /* WELCOME BAR */
 .welcome-bar{
-  position:fixed;
-  top:80px;   /* keeps it UNDER header */
-  left:0;
   width:100%;
-  z-index:1500;
   background:#ff7a00;
   color:white;
   overflow:hidden;
   padding:6px 0;
   font-size:14px;
+  position:relative;
+  z-index:1;
 }
 
 .scroll-text{
