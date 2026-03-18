@@ -441,3 +441,20 @@ body.dark .level{
 #answers button:hover{
   background:#ff7a00;
 }
+#answers button {
+  display: block;
+  margin: 5px 0; /* small vertical space */
+  width: 100%;
+  padding: 8px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  background-color: #ff7a00;
+  color: white;
+  transition: 0.3s;
+}
+
+#answers button:hover {
+  background-color: #e06b00;
+}
