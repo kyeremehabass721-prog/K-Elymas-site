@@ -411,3 +411,8 @@ body.dark .level{
   background:rgba(255,255,255,0.2);
   transform:scale(1.1);
 }
+header{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
