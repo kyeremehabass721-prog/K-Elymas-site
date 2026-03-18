@@ -553,9 +553,9 @@ function loadQuestion(){
   const q = questions[Math.floor(Math.random() * questions.length)];
   document.getElementById("question").innerText = q.q;
   let html = "";
-  q.options.forEach(opt=>{
-    html += `<button onclick="checkAnswer('${opt}','${q.answer}')">${opt}</button><br>`;
-  });
+  q.options.forEach(option => {
+  answersHTML += `<button onclick="checkAnswer('${option}', '${q.answer}')">${option}</button>`;
+});
   document.getElementById("answers").innerHTML = html;
   document.getElementById("result").innerText = "";
 }
