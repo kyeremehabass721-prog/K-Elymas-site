@@ -390,15 +390,15 @@ body.dark .level{
   font-size:25px;
   cursor:pointer;
 }
-/* FACEBOOK STYLE NAV (IMPROVED) */
+/* EDGE-TO-EDGE NAV */
 
 .top-nav{
   display: flex;
-  justify-content: space-around; /* better spacing */
+  justify-content: space-between; /* pushes first & last to edges */
   align-items: center;
   width: 100%;
-  margin-top: 8px; /* slightly down */
-  padding: 0 10px;
+  margin-top: 18px;
+  padding: 0; /* remove side padding */
 }
 
 .top-nav a{
@@ -407,17 +407,17 @@ body.dark .level{
   align-items: center;
   text-decoration: none;
   color: white;
-  font-size: 16px;   /* smaller */
-  flex: 1;
+  font-size: 15px;
+  flex: 1; /* equal width */
   padding: 5px 0;
 }
 
 .top-nav span{
-  font-size: 18px;   /* icon size smaller */
+  font-size: 18px;
 }
 
 .top-nav small{
-  font-size: 11px;   /* text smaller */
+  font-size: 11px;
   margin-top: 2px;
 }
 
