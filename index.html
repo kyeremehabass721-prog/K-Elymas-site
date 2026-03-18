@@ -368,5 +368,30 @@ function closePreview(){
   document.getElementById("previewModal").style.display = "none";
 }
 </script>
+<script>
+function loadBible(){
+  let book = document.getElementById("bookSelect").value;
+  let chapter = document.getElementById("chapterInput").value;
+
+  if(!chapter){
+    alert("Please enter chapter number");
+    return;
+  }
+
+  fetch(`https://bible-api.com/${book} ${chapter}`)
+  .then(res => res.json())
+  .then(data => {
+
+    let text = `<h3>${data.reference}</h3>`;
+
+    data.verses.forEach(v=>{
+      text += `<p><strong>${v.verse}</strong> ${v.text}</p>`;
+    });
+
+    document.getElementById("bibleText").innerHTML = text;
+
+  });
+}
+</script>
 </body>
 </html>
