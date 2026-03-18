@@ -425,3 +425,19 @@ body.dark .level{
   transform: scale(1.05);
   transition: 0.2s ease;
 }
+#answers button{
+  display:block;
+  width:100%;
+  margin:8px 0;
+  padding:10px;
+  border:none;
+  border-radius:8px;
+  background:#4b0082;
+  color:white;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+#answers button:hover{
+  background:#ff7a00;
+}
