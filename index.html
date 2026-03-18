@@ -311,5 +311,18 @@ function searchBooks(){
     <p id="previewDesc"></p>
   </div>
 </div>
+<script>
+function openPreview(title, desc, img){
+  document.getElementById("previewTitle").innerText = title;
+  document.getElementById("previewDesc").innerText = desc;
+  document.getElementById("previewImg").src = img;
+
+  document.getElementById("previewModal").style.display = "flex";
+}
+
+function closePreview(){
+  document.getElementById("previewModal").style.display = "none";
+}
+</script>
 </body>
 </html>
