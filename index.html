@@ -603,7 +603,9 @@ function checkAnswer(selected, correct){
   }
 }
 
-/* AI STYLE QUIZ */
+<script>
+
+/* AI QUIZ DATA */
 const aiData = [
   {
     q: "Where was Jesus born?",
@@ -614,9 +616,15 @@ const aiData = [
     q: "Who denied Jesus three times?",
     options: ["Peter", "John", "James", "Andrew"],
     answer: "Peter"
+  },
+  {
+    q: "Who built the ark?",
+    options: ["Noah", "Moses", "David", "Abraham"],
+    answer: "Noah"
   }
 ];
 
+/* GENERATE AI QUESTION */
 function generateAI(){
   const q = aiData[Math.floor(Math.random() * aiData.length)];
 
@@ -624,13 +632,14 @@ function generateAI(){
 
   let html = "";
   q.options.forEach(opt=>{
-    html += `<button onclick="checkAI('${opt}','${q.answer}')">${opt}</button>`;
+    html += `<button onclick="checkAI('${opt}','${q.answer}')">${opt}</button><br>`;
   });
 
   document.getElementById("aiAnswers").innerHTML = html;
   document.getElementById("aiResult").innerText = "";
 }
 
+/* CHECK ANSWER */
 function checkAI(selected, correct){
   if(selected === correct){
     document.getElementById("aiResult").innerText = "✅ Correct!";
@@ -638,9 +647,6 @@ function checkAI(selected, correct){
     document.getElementById("aiResult").innerText = "❌ Wrong!";
   }
 }
-
-/* START QUIZ */
-document.addEventListener("DOMContentLoaded", loadQuestion);
 
 </script>
 </body>
