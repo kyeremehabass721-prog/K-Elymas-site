@@ -568,19 +568,6 @@ window.addEventListener("load", loadQuestion);
 <script>
 
 /* NORMAL QUIZ */
-const questions = [
-  {
-    q: "Who built the ark?",
-    options: ["Noah", "Moses", "David", "Abraham"],
-    answer: "Noah"
-  },
-  {
-    q: "Who killed Goliath?",
-    options: ["David", "Saul", "Solomon", "Samuel"],
-    answer: "David"
-  }
-];
-
 function loadQuestion(){
   const q = questions[Math.floor(Math.random() * questions.length)];
 
