@@ -489,5 +489,68 @@ function openAI(){
   }
 }
 </script>
+<script>
+const questions = [
+
+{
+  q: "Who built the ark?",
+  options: ["Moses", "Noah", "David", "Abraham"],
+  answer: "Noah"
+},
+
+{
+  q: "Who was swallowed by a big fish?",
+  options: ["Jonah", "Peter", "Paul", "Elijah"],
+  answer: "Jonah"
+},
+
+{
+  q: "Where was Jesus born?",
+  options: ["Nazareth", "Bethlehem", "Jerusalem", "Galilee"],
+  answer: "Bethlehem"
+},
+
+{
+  q: "Who defeated Goliath?",
+  options: ["Saul", "David", "Samuel", "Solomon"],
+  answer: "David"
+},
+
+{
+  q: "How many days did God take to create the world?",
+  options: ["5", "6", "7", "8"],
+  answer: "6"
+}
+
+];
+
+function loadQuestion(){
+
+  const q = questions[Math.floor(Math.random() * questions.length)];
+
+  document.getElementById("question").innerText = q.q;
+
+  let answersHTML = "";
+
+  q.options.forEach(option => {
+    answersHTML += `<button onclick="checkAnswer('${option}', '${q.answer}')">${option}</button><br><br>`;
+  });
+
+  document.getElementById("answers").innerHTML = answersHTML;
+  document.getElementById("result").innerText = "";
+}
+
+function checkAnswer(selected, correct){
+
+  if(selected === correct){
+    document.getElementById("result").innerText = "✅ Correct!";
+  } else {
+    document.getElementById("result").innerText = "❌ Wrong! Correct answer: " + correct;
+  }
+}
+
+/* Load first question */
+window.addEventListener("load", loadQuestion);
+</script>
 </body>
 </html>
