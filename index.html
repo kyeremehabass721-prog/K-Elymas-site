@@ -42,7 +42,7 @@
 
   <a href="#" onclick="openAI()">
     <span>🤖</span>
-    <small>Ask AI</small>
+    <small>Ask Elymas</small>
   </a>
 
   <a href="#quiz">
@@ -276,13 +276,21 @@ onclick="openPreview(
 
 <h2>❓ Bible Quiz</h2>
 
+<!-- NORMAL QUIZ -->
 <p id="question">Loading question...</p>
-
 <div id="answers"></div>
-
 <p id="result"></p>
-
 <button onclick="loadQuestion()">Next Question</button>
+
+<hr>
+
+<!-- AI QUIZ -->
+<h3>🤖 AI Quiz</h3>
+<button onclick="generateAI()">Generate Question</button>
+
+<p id="aiQuestion">Click the button to get a question</p>
+<div id="aiAnswers"></div>
+<p id="aiResult"></p>
 
 </section>
 <h2>Read the Bible</h2>
