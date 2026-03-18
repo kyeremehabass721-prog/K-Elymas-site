@@ -554,8 +554,8 @@ function loadQuestion(){
   document.getElementById("question").innerText = q.q;
   let html = "";
   q.options.forEach(option => {
-  answersHTML += `<button onclick="checkAnswer('${option}', '${q.answer}')">${option}</button>`;
-});
+    html += `<button onclick="checkAnswer('${option}', '${q.answer}')">${option}</button>`;
+  });
   document.getElementById("answers").innerHTML = html;
   document.getElementById("result").innerText = "";
 }
