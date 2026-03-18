@@ -317,7 +317,21 @@ body.dark{
   background:#121212;
   color:white;
 }
+body.dark .school{
+  background:#2a2a2a;
+}
 
+body.dark .level{
+  color:white;
+}
+
+body.dark .school-name{
+  color:#ff7a00;
+}
+
+body.dark .school span{
+  color:#ffb347;
+}
 body.dark .biography,
 body.dark .education,
 body.dark .school,
