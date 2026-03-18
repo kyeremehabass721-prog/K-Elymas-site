@@ -177,6 +177,22 @@ onclick="openPreview(
 </section>
 <section id="bible" class="biography">
 
+<h2>📖 Full Bible Reader</h2>
+
+<select id="bookSelect">
+  <option value="john">John</option>
+  <option value="psalms">Psalms</option>
+  <option value="genesis">Genesis</option>
+</select>
+
+<input type="number" id="chapterInput" placeholder="Chapter">
+
+<button onclick="loadBible()">Read</button>
+
+<div id="bibleText"></div>
+
+</section>
+
 <h2>Read the Bible</h2>
 
 <input id="searchBible" placeholder="Example: John 3:16">
