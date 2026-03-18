@@ -390,29 +390,33 @@ body.dark .level{
   font-size:25px;
   cursor:pointer;
 }
-/* FACEBOOK STYLE HEADER NAV */
+/* FACEBOOK STYLE NAV */
+
 .top-nav{
-  display:flex;
-  justify-content:space-around;
-  align-items:center;
-  margin-top:10px;
+  display: flex;
+  justify-content: space-between; /* edge to edge */
+  align-items: center;
+  width: 100%;
+  margin-top: 10px; /* moves it slightly down */
+  padding: 0 15px; /* gives side spacing */
 }
 
 .top-nav a{
-  font-size:22px;
-  text-decoration:none;
-  color:white;
-  padding:8px 12px;
-  border-radius:8px;
-  transition:all 0.3s ease;
-}
-
-.top-nav a:hover{
-  background:rgba(255,255,255,0.2);
-  transform:scale(1.1);
-}
-header{
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  flex: 1; /* equal space for each */
+}
+
+.top-nav small{
+  font-size: 12px;
+  margin-top: 3px;
+}
+
+.top-nav a:hover{
+  transform: scale(1.1);
+  transition: 0.3s ease;
 }
