@@ -458,54 +458,53 @@ body.dark .level{
 #answers button:hover {
   background-color: #e06b00;
 }
-/* ===== New Header Style ===== */
+/* ===== NEW HEADER STYLE ===== */
 .new-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #6a0dad; /* Purple */
-  color: #ffa500; /* Orange */
-  padding: 15px 30px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  background-color: #6A0DAD; /* flat purple */
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  position: relative;
 }
 
 .new-header .logo h1 {
+  font-size: 28px;
   margin: 0;
-  font-size: 1.8em;
 }
 
 .new-header .logo p {
-  margin: 2px 0 0 0;
-  font-size: 0.9em;
-  color: #fff;
+  font-size: 14px;
+  margin: 5px 0 15px 0;
+}
+
+.new-header .top-nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
 .new-header .top-nav a {
-  color: #fff;
-  margin-left: 20px;
   text-decoration: none;
-  font-weight: bold;
-  display: inline-flex;
+  color: white;
+  font-size: 14px;
+  display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .new-header .top-nav a span {
-  font-size: 1.2em;
-}
-
-.new-header .top-nav a small {
-  font-size: 0.7em;
-  margin-top: 2px;
-  color: #fff;
+  font-size: 20px;
 }
 
 .new-header .dark-toggle {
-  background: #ffa500;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: #FFA500; /* flat orange button */
   border: none;
+  color: white;
   padding: 8px 12px;
-  border-radius: 5px;
+  border-radius: 6px;
   cursor: pointer;
-  font-size: 1.1em;
-  color: #6a0dad;
 }
