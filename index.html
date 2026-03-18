@@ -265,5 +265,18 @@ window.addEventListener("scroll", () => {
   });
 });
 </script>
+<script>
+document.addEventListener("DOMContentLoaded", function(){
+
+  document.querySelectorAll(".heart").forEach(function(heart){
+    
+    heart.addEventListener("click", function(){
+      this.classList.toggle("liked");
+    });
+
+  });
+
+});
+</script>
 </body>
 </html>
