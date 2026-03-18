@@ -74,9 +74,6 @@
 <p id="verse">Loading verse...</p>
 </section>
 <section id="books" class="books">
-<h2 style="text-align:center;">
-  Our Books (<span id="bookCount"></span>)
-</h2>
   <!-- Book 1 -->
   <div class="book">
     
@@ -255,10 +252,6 @@ window.addEventListener("scroll", function(){
     header.classList.remove("scrolled");
   }
 });
-</script>
-<script>
-document.getElementById("bookCount").innerText =
-document.querySelectorAll(".book").length;
 </script>
 <script>
 function toggleDarkMode(){
