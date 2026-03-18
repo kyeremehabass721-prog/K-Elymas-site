@@ -504,80 +504,58 @@ function openAI(){
 </script>
 <script>
 const questions = [
-
-{
-  q: "Who built the ark?",
-  options: ["Moses", "Noah", "David", "Abraham"],
-  answer: "Noah"
-},
-
-{
-  q: "Who was swallowed by a big fish?",
-  options: ["Jonah", "Peter", "Paul", "Elijah"],
-  answer: "Jonah"
-},
-
-{
-  q: "Where was Jesus born?",
-  options: ["Nazareth", "Bethlehem", "Jerusalem", "Galilee"],
-  answer: "Bethlehem"
-},
-
-{
-  q: "Who defeated Goliath?",
-  options: ["Saul", "David", "Samuel", "Solomon"],
-  answer: "David"
-},
-
-{
-  q: "How many days did God take to create the world?",
-  options: ["5", "6", "7", "8"],
-  answer: "6"
-}
-
+  { q: "Who created the world?", options: ["God", "Moses", "Noah", "Abraham"], answer: "God" },
+  { q: "Who built the ark?", options: ["Noah", "Moses", "David", "Abraham"], answer: "Noah" },
+  { q: "Who was swallowed by a big fish?", options: ["Jonah", "Peter", "Paul", "Elijah"], answer: "Jonah" },
+  { q: "Where was Jesus born?", options: ["Nazareth", "Bethlehem", "Jerusalem", "Galilee"], answer: "Bethlehem" },
+  { q: "Who defeated Goliath?", options: ["Saul", "David", "Samuel", "Solomon"], answer: "David" },
+  { q: "How many days did God take to create the world?", options: ["5", "6", "7", "8"], answer: "6" },
+  { q: "Who led the Israelites out of Egypt?", options: ["Moses", "Aaron", "Joshua", "Caleb"], answer: "Moses" },
+  { q: "Who was the first king of Israel?", options: ["Saul", "David", "Solomon", "Samuel"], answer: "Saul" },
+  { q: "Who was known for his wisdom?", options: ["David", "Solomon", "Samuel", "Moses"], answer: "Solomon" },
+  { q: "Who was thrown into the lion's den?", options: ["Daniel", "Shadrach", "Meshach", "Abednego"], answer: "Daniel" },
+  { q: "Who parted the Red Sea?", options: ["Moses", "Aaron", "Joshua", "Elijah"], answer: "Moses" },
+  { q: "Who received the Ten Commandments?", options: ["Moses", "Aaron", "David", "Solomon"], answer: "Moses" },
+  { q: "Who was sold by his brothers into Egypt?", options: ["Joseph", "Benjamin", "Jacob", "Esau"], answer: "Joseph" },
+  { q: "Who was the mother of Samuel?", options: ["Hannah", "Sarah", "Rebekah", "Leah"], answer: "Hannah" },
+  { q: "Who wrestled with an angel?", options: ["Jacob", "Esau", "Moses", "Abraham"], answer: "Jacob" },
+  { q: "Who interpreted Pharaoh's dreams?", options: ["Joseph", "Daniel", "Moses", "Aaron"], answer: "Joseph" },
+  { q: "Who was king after Saul?", options: ["David", "Solomon", "Samuel", "Saul"], answer: "David" },
+  { q: "Who wrote many of the Psalms?", options: ["David", "Moses", "Solomon", "Asaph"], answer: "David" },
+  { q: "Who was the strong man with long hair?", options: ["Samson", "David", "Gideon", "Saul"], answer: "Samson" },
+  { q: "Who was thrown into a fiery furnace?", options: ["Shadrach, Meshach, and Abednego", "Daniel", "Joseph", "Elijah"], answer: "Shadrach, Meshach, and Abednego" },
+  { q: "Who baptized Jesus?", options: ["John the Baptist", "Peter", "Paul", "Moses"], answer: "John the Baptist" },
+  { q: "Who denied Jesus three times?", options: ["Peter", "John", "James", "Andrew"], answer: "Peter" },
+  { q: "Who wrote most of the New Testament letters?", options: ["Paul", "Peter", "John", "James"], answer: "Paul" },
+  { q: "Who was the first Christian martyr?", options: ["Stephen", "James", "Peter", "Paul"], answer: "Stephen" },
+  { q: "Who walked on water?", options: ["Peter", "Jesus", "John", "James"], answer: "Jesus" },
+  { q: "Who betrayed Jesus?", options: ["Judas", "Peter", "John", "James"], answer: "Judas" },
+  { q: "Who was raised from the dead by Jesus?", options: ["Lazarus", "John", "Peter", "Paul"], answer: "Lazarus" },
+  { q: "Who saw a vision of a sheet with animals?", options: ["Peter", "Paul", "John", "Stephen"], answer: "Peter" },
+  { q: "Who wrote the Book of Revelation?", options: ["John", "Paul", "Peter", "James"], answer: "John" },
+  { q: "Who was the disciple that doubted Jesus' resurrection?", options: ["Thomas", "Peter", "John", "James"], answer: "Thomas" },
+  { q: "Who climbed a sycamore tree to see Jesus?", options: ["Zacchaeus", "Matthew", "John", "Peter"], answer: "Zacchaeus" },
+  { q: "Who betrayed Samson?", options: ["Delilah", "Judges", "Ruth", "Miriam"], answer: "Delilah" },
+  { q: "Who was thrown into prison for praying?", options: ["Daniel", "Shadrach", "Meshach", "Abednego"], answer: "Daniel" },
+  { q: "Who was the mother of Jesus?", options: ["Mary", "Elizabeth", "Martha", "Anna"], answer: "Mary" },
+  { q: "Who was Jesus’ earthly father?", options: ["Joseph", "David", "Zacharias", "Simon"], answer: "Joseph" },
+  { q: "Who anointed David as king?", options: ["Samuel", "Saul", "Nathan", "Elijah"], answer: "Samuel" },
+  { q: "Who was thrown into the pit by his brothers?", options: ["Joseph", "Benjamin", "David", "Jacob"], answer: "Joseph" },
+  { q: "Who was the tax collector that followed Jesus?", options: ["Matthew", "Peter", "James", "John"], answer: "Matthew" },
+  { q: "Who wrote the Book of Acts?", options: ["Luke", "Paul", "John", "Peter"], answer: "Luke" },
+  { q: "Who denied Peter in the courtyard?", options: ["Servant girl", "Mary", "John", "James"], answer: "Servant girl" },
+  { q: "Who was commanded to build the tabernacle?", options: ["Moses", "Aaron", "David", "Solomon"], answer: "Moses" },
+  { q: "Who was swallowed by the earth?", options: ["Korah", "Dathan", "Abiram", "Moses"], answer: "Korah" }
+  // … continue until 120+ questions
 ];
 
 function loadQuestion(){
-
   const q = questions[Math.floor(Math.random() * questions.length)];
-
   document.getElementById("question").innerText = q.q;
-
-  let answersHTML = "";
-
-  q.options.forEach(option => {
-    answersHTML += `<button onclick="checkAnswer('${option}', '${q.answer}')">${option}</button><br><br>`;
-  });
-
-  document.getElementById("answers").innerHTML = answersHTML;
-  document.getElementById("result").innerText = "";
-}
-
-function checkAnswer(selected, correct){
-
-  if(selected === correct){
-    document.getElementById("result").innerText = "✅ Correct!";
-  } else {
-    document.getElementById("result").innerText = "❌ Wrong! Correct answer: " + correct;
-  }
-}
-
-/* Load first question */
-window.addEventListener("load", loadQuestion);
-</script>
-<script>
-
-/* NORMAL QUIZ */
-function loadQuestion(){
-  const q = questions[Math.floor(Math.random() * questions.length)];
-
-  document.getElementById("question").innerText = q.q;
-
   let html = "";
   q.options.forEach(opt=>{
-    html += `<button onclick="checkAnswer('${opt}','${q.answer}')">${opt}</button>`;
+    html += `<button onclick="checkAnswer('${opt}','${q.answer}')">${opt}</button><br>`;
   });
-
   document.getElementById("answers").innerHTML = html;
   document.getElementById("result").innerText = "";
 }
@@ -586,53 +564,12 @@ function checkAnswer(selected, correct){
   if(selected === correct){
     document.getElementById("result").innerText = "✅ Correct!";
   } else {
-    document.getElementById("result").innerText = "❌ Wrong!";
+    document.getElementById("result").innerText = "❌ Wrong! Correct answer: " + correct;
   }
 }
 
-/* AI QUIZ DATA */
-const aiData = [
-  {
-    q: "Where was Jesus born?",
-    options: ["Nazareth", "Bethlehem", "Jerusalem", "Galilee"],
-    answer: "Bethlehem"
-  },
-  {
-    q: "Who denied Jesus three times?",
-    options: ["Peter", "John", "James", "Andrew"],
-    answer: "Peter"
-  },
-  {
-    q: "Who built the ark?",
-    options: ["Noah", "Moses", "David", "Abraham"],
-    answer: "Noah"
-  }
-];
-
-/* GENERATE AI QUESTION */
-function generateAI(){
-  const q = aiData[Math.floor(Math.random() * aiData.length)];
-
-  document.getElementById("aiQuestion").innerText = q.q;
-
-  let html = "";
-  q.options.forEach(opt=>{
-    html += `<button onclick="checkAI('${opt}','${q.answer}')">${opt}</button><br>`;
-  });
-
-  document.getElementById("aiAnswers").innerHTML = html;
-  document.getElementById("aiResult").innerText = "";
-}
-
-/* CHECK ANSWER */
-function checkAI(selected, correct){
-  if(selected === correct){
-    document.getElementById("aiResult").innerText = "✅ Correct!";
-  } else {
-    document.getElementById("aiResult").innerText = "❌ Wrong!";
-  }
-}
-
+window.addEventListener("load", loadQuestion);
 </script>
+  
 </body>
 </html>
