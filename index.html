@@ -570,6 +570,48 @@ function checkAnswer(selected, correct){
 
 window.addEventListener("load", loadQuestion);
 </script>
+  <script>
+// ===== AI BIBLE QUIZ DATA =====
+const aiQuestions = [
+  { q: "Who was the mother of Jesus?", options: ["Mary", "Elizabeth", "Anna", "Martha"], answer: "Mary" },
+  { q: "Who led the Israelites out of Egypt?", options: ["Moses", "Aaron", "Joshua", "Samuel"], answer: "Moses" },
+  { q: "What did God create on the first day?", options: ["Light", "Sky", "Land", "Stars"], answer: "Light" },
+  { q: "Which apostle doubted Jesus' resurrection?", options: ["Thomas", "Peter", "John", "James"], answer: "Thomas" },
+  { q: "How many days and nights did it rain during the flood?", options: ["40", "30", "20", "50"], answer: "40" },
+  { q: "What river did John baptize people in?", options: ["Jordan", "Nile", "Euphrates", "Tigris"], answer: "Jordan" },
+  { q: "Who was the strongest man in the Bible?", options: ["Samson", "Goliath", "David", "Solomon"], answer: "Samson" },
+  { q: "Who interpreted Pharaoh's dream?", options: ["Joseph", "Daniel", "Moses", "Elijah"], answer: "Joseph" },
+  { q: "What was Paul’s original name?", options: ["Saul", "Barnabas", "Silas", "Timothy"], answer: "Saul" },
+  { q: "Who was thrown into the lions’ den?", options: ["Daniel", "Shadrach", "Meshach", "Abednego"], answer: "Daniel" },
+  // Add more questions here...
+];
+
+// ===== GENERATE AI QUESTION =====
+function generateAI() {
+  const q = aiQuestions[Math.floor(Math.random() * aiQuestions.length)];
   
+  document.getElementById("aiQuestion").innerText = q.q;
+  
+  let html = "";
+  q.options.forEach(opt => {
+    html += `<button onclick="checkAI('${opt}','${q.answer}')">${opt}</button><br>`;
+  });
+  
+  document.getElementById("aiAnswers").innerHTML = html;
+  document.getElementById("aiResult").innerText = "";
+}
+
+// ===== CHECK AI ANSWER =====
+function checkAI(selected, correct) {
+  if (selected === correct) {
+    document.getElementById("aiResult").innerText = "✅ Correct!";
+  } else {
+    document.getElementById("aiResult").innerText = "❌ Wrong! Correct answer: " + correct;
+  }
+}
+
+// Optional: Load first AI question on page load
+// window.addEventListener("load", generateAI);
+</script>
 </body>
 </html>
