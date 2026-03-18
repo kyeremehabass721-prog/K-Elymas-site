@@ -325,3 +325,16 @@ body.dark .book{
   background:#1e1e1e;
   color:white;
 }
+/* Smooth Scroll Animation */
+.biography, 
+.education, 
+.book{
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease;
+}
+
+.show{
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
