@@ -73,7 +73,16 @@
 
 <p id="verse">Loading verse...</p>
 </section>
-<section id="books" class="books">
+<div style="text-align:center; margin:20px;">
+  <input 
+    type="text" 
+    id="searchInput" 
+    placeholder="🔍 Search books..." 
+    onkeyup="searchBooks()"
+    style="padding:10px; width:80%; max-width:300px; border-radius:8px; border:1px solid #ccc;"
+  >
+</div>
+  <section id="books" class="books">
   <!-- Book 1 -->
   <div class="book">
     
