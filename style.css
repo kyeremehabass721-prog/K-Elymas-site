@@ -390,3 +390,24 @@ body.dark .level{
   font-size:25px;
   cursor:pointer;
 }
+/* FACEBOOK STYLE HEADER NAV */
+.top-nav{
+  display:flex;
+  justify-content:space-around;
+  align-items:center;
+  margin-top:10px;
+}
+
+.top-nav a{
+  font-size:22px;
+  text-decoration:none;
+  color:white;
+  padding:8px 12px;
+  border-radius:8px;
+  transition:all 0.3s ease;
+}
+
+.top-nav a:hover{
+  background:rgba(255,255,255,0.2);
+  transform:scale(1.1);
+}
