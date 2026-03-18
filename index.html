@@ -287,5 +287,21 @@ document.addEventListener("DOMContentLoaded", function(){
 
 });
 </script>
+<script>
+function searchBooks(){
+  let input = document.getElementById("searchInput").value.toLowerCase();
+  let books = document.querySelectorAll(".book");
+
+  books.forEach(book => {
+    let title = book.querySelector("h3").innerText.toLowerCase();
+
+    if(title.includes(input)){
+      book.style.display = "block";
+    } else {
+      book.style.display = "none";
+    }
+  });
+}
+</script>
 </body>
 </html>
