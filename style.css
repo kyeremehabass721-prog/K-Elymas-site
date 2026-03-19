@@ -25,17 +25,19 @@ body {
 /* ===== DARK BUTTON (VERY FAR LEFT) ===== */
 .dark-toggle{
   position: absolute;
-  left: 0;              /* push to edge */
-  top: 0;
-  margin: 10px;         /* small spacing from edge */
 
-  background: #ff7a00;  /* orange */
+  left: 5px;   /* push to real edge */
+  top: 5px;
+
+  background: #ff7a00;
   border: none;
   color: white;
 
   padding: 6px 10px;
   border-radius: 6px;
   cursor: pointer;
+
+  z-index: 2000; /* make sure nothing blocks it */
 }
 
 /* ===== LOGO ===== */
