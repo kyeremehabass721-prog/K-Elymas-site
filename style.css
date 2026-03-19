@@ -47,10 +47,8 @@
   padding: 6px 0;
   font-size: 14px;
   text-align: center;
-  z-index: 1;          /* no need for high z-index now */
-margin-top: 60px; /* same as header height 
-
-  }
+  z-index: 1;          /* no need for high z-index now */ 
+}
 
 /* ===== BODY SPACING ===== */
 body {
