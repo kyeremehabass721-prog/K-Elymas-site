@@ -65,10 +65,10 @@ body {
 /* ===== NAV ===== */
 .top-nav{
   display: flex;
-  justify-content: space-between;
+  justify-content: center; /* 👈 center items */
   align-items: center;
-
-  padding: 0 5px;
+  gap: 15px; /* 👈 spacing between menu items */
+  margin-top: 18px;
 }
 
 .top-nav a{
