@@ -892,3 +892,12 @@ transition: 0.3s;
 background-color: #e06b00;
 
 }
+@media(max-width:600px){
+  .top-nav a{
+    font-size:12px;
+  }
+
+  .new-header h1{
+    font-size:18px;
+  }
+}
