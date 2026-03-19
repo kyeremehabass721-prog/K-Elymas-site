@@ -6,28 +6,30 @@ body {
   text-align: center;
 }
 
-/* ===== NEW STICKY HEADER ===== */
+/* ===== HEADER ===== */
 .new-header{
   position: sticky;
   top: 0;
   z-index: 1000;
 
-  background: #6A0DAD; /* flat purple */
+  background: #6A0DAD; /* purple */
   color: white;
 
-  padding: 15px 10px;
+  padding: 15px 0 10px;
   text-align: center;
 
   box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+  border-bottom: 4px solid #ff7a00; /* 🔥 orange line */
 }
 
-/* Dark mode button (TOP LEFT) */
+/* ===== DARK BUTTON (VERY FAR LEFT) ===== */
 .dark-toggle{
   position: absolute;
-  left: 10px;
-  top: 15px;
+  left: 0;              /* push to edge */
+  top: 0;
+  margin: 10px;         /* small spacing from edge */
 
-  background: #ff7a00;
+  background: #ff7a00;  /* orange */
   border: none;
   color: white;
 
@@ -36,25 +38,27 @@ body {
   cursor: pointer;
 }
 
-/* Logo */
+/* ===== LOGO ===== */
 .new-header h1{
   margin: 0;
   font-size: 22px;
   line-height: 1.2;
 }
 
+/* ORANGE PART */
 .new-header .hub{
-  color: #ff7a00; /* orange */
+  color: #ff7a00;
   font-size: 18px;
 }
 
-/* Tagline */
+/* TAGLINE */
 .new-header p{
   margin: 5px 0 10px;
   font-size: 13px;
+  color: #ffcc99; /* soft orange text */
 }
 
-/* NAV MENU */
+/* ===== NAV ===== */
 .top-nav{
   display: flex;
   justify-content: space-between;
@@ -69,6 +73,15 @@ body {
   text-decoration: none;
   color: white;
   font-size: 12px;
+  padding: 5px 0;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+/* 🔥 ORANGE HOVER EFFECT */
+.top-nav a:hover{
+  background: #ff7a00;
+  color: white;
 }
 
 .top-nav a span{
