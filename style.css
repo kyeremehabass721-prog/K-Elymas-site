@@ -26,7 +26,6 @@ box-sizing: border-box;
 
 border-bottom: 4px solid #ff7a00;
 
-height: 60px;          /* fixed header height */
 
 }
 
@@ -98,7 +97,7 @@ background: #f5f6fa;
 
 text-align: center;
 
-padding-top: 90px;      /* header + welcome bar height (60 + 30px) */
+padding-top: 120px;      /* header + welcome bar height (60 + 30px) */
 
 }
 
