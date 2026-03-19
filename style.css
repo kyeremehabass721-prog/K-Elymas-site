@@ -1,10 +1,24 @@
 /* General Styles */
 
+body {
+
+font-family: Arial, Helvetica, sans-serif;
+
+margin: 0;
+
+background: #f5f6fa;
+
+text-align: center;
+
+padding-top: 120px; /* Add this line */
+
+}
+
 /* ===== HEADER ===== */
 
 .new-header {
 
-position: fixed;      /* stays at top */
+position: fixed;
 
 top: 0;
 
@@ -18,7 +32,7 @@ background: #6A0DAD;
 
 color: white;
 
-padding: 15px 10px;   /* header padding */
+padding: 15px 10px;
 
 text-align: center;
 
@@ -26,16 +40,15 @@ box-sizing: border-box;
 
 border-bottom: 4px solid #ff7a00;
 
-
 }
 
-/* ===== DARK MODE BUTTON ===== */
+/* ===== DARK BUTTON (VERY FAR LEFT) ===== */
 
 .dark-toggle{
 
 position: absolute;
 
-left: 5px;
+left: 5px;   /* push to real edge */
 
 top: 5px;
 
@@ -45,59 +58,13 @@ border: none;
 
 color: white;
 
-padding: 4px 6px;      /* smaller */
-
-font-size: 12px;       /* smaller font */
+padding: 6px 10px;
 
 border-radius: 6px;
 
 cursor: pointer;
 
-z-index: 2000;          /* above header */
-
-}
-
-/* ===== WELCOME BAR ===== */
-
-/* WELCOME BAR */
-
-.welcome-bar {
-
-position: relative;  /* change from fixed */
-
-top: auto;           /* remove top positioning */
-
-left: auto;
-
-width: 100%;
-
-background: #ff7a00;
-
-color: white;
-
-padding: 6px 0;
-
-font-size: 14px;
-
-text-align: center;
-
-z-index: 1;          /* no need for high z-index now */
-
-}
-
-/* ===== BODY SPACING ===== */
-
-body {
-
-font-family: Arial, Helvetica, sans-serif;
-
-margin: 0;
-
-background: #f5f6fa;
-
-text-align: center;
-
-padding-top: 120px;      /* header + welcome bar height (60 + 30px) */
+z-index: 2000; /* make sure nothing blocks it */
 
 }
 
@@ -460,6 +427,30 @@ font-weight:bold;
 }
 
 /* WELCOME BAR */
+
+.welcome-bar {
+
+position: fixed;
+
+top: 60px; /* height of your header, adjust if header is taller */
+
+left: 0;
+
+width: 100%;
+
+background: #ff7a00;
+
+color: white;
+
+padding: 6px 0;
+
+font-size: 14px;
+
+text-align: center;
+
+z-index: 1001; /* above the header */
+
+}
 
 .scroll-text{
 
@@ -891,13 +882,4 @@ transition: 0.3s;
 
 background-color: #e06b00;
 
-}
-@media(max-width:600px){
-  .top-nav a{
-    font-size:12px;
-  }
-
-  .new-header h1{
-    font-size:18px;
-  }
 }
