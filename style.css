@@ -357,17 +357,6 @@ footer {
   display: block;
   margin-left: 25px; /* This pushes 📚SHOP slightly to the right */
 }
-.dark-toggle{
-  position:absolute;
-  right:50px;
-  top:15px;
-  background:none;
-  border:none;
-  font-size:22px;
-  color:white;
-  cursor:pointer;
-}
-
 /* Dark Mode */
 body.dark{
   background:#121212;
