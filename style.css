@@ -34,7 +34,62 @@ header p {
   margin-top: 5px;
   font-size: 18px;
 }
+/* ===== NEW HEADER STYLE ===== */
+.new-header {
+  background-color: #6A0DAD; /* flat purple, NO gradient */
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  position: relative;
+}
 
+.new-header .logo h1 {
+  font-size: 28px;
+  margin: 0;
+}
+
+.new-header .logo h1 .shop {
+  font-size: 24px;
+  display: block;
+  margin-top: 5px;
+}
+
+.new-header .logo p {
+  font-size: 14px;
+  margin: 5px 0 15px 0;
+}
+
+.new-header .top-nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.new-header .top-nav a {
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.new-header .top-nav a span {
+  font-size: 20px;
+}
+
+.new-header .dark-toggle {
+  position: absolute;
+  top: 15px;
+  left: 15px; /* moved to top-left */
+  background: #FFA500; /* flat orange button */
+  border: none;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
 /* Menu Button */
 .menu-toggle{
   position:absolute;
@@ -457,54 +512,4 @@ body.dark .level{
 
 #answers button:hover {
   background-color: #e06b00;
-}
-/* ===== NEW HEADER STYLE ===== */
-.new-header {
-  background-color: #6A0DAD; /* flat purple */
-  color: white;
-  text-align: center;
-  padding: 20px 0;
-  position: relative;
-}
-
-.new-header .logo h1 {
-  font-size: 28px;
-  margin: 0;
-}
-
-.new-header .logo p {
-  font-size: 14px;
-  margin: 5px 0 15px 0;
-}
-
-.new-header .top-nav {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.new-header .top-nav a {
-  text-decoration: none;
-  color: white;
-  font-size: 14px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.new-header .top-nav a span {
-  font-size: 20px;
-}
-
-.new-header .dark-toggle {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  background: #FFA500; /* flat orange button */
-  border: none;
-  color: white;
-  padding: 8px 12px;
-  border-radius: 6px;
-  cursor: pointer;
 }
