@@ -10,19 +10,20 @@ body {
 
 /* ===== HEADER ===== */
 .new-header {
-  position: fixed;  /* 🔹 always stays at top */
+  position: fixed; /* stays at top */
   top: 0;
   left: 0;
-  width: 100%;      /* 🔹 make full width */
+  width: 100%;
   z-index: 1000;
 
   background: #6A0DAD;
   color: white;
 
-  padding: 20px 10px 10px 50px;
+  padding: 15px 10px; /* smaller left padding so text fits */
   text-align: center;
   box-shadow: 0 3px 10px rgba(0,0,0,0.2);
   border-bottom: 4px solid #ff7a00;
+  box-sizing: border-box;
 }
 
 /* ===== DARK BUTTON (VERY FAR LEFT) ===== */
