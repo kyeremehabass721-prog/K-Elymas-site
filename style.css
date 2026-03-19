@@ -6,89 +6,74 @@ body {
   text-align: center;
 }
 
-/* HEADER */
-header{
-  background:linear-gradient(135deg, #4b0082, #7b1fa2, #ff7a00);
-  color:white;
-  padding:20px 20px;
-  position:sticky;
-  top:0;
-  z-index:1000;
-  box-shadow:0 4px 10px rgba(0,0,0,0.2);
-  transition:all 0.3s ease;
-}
+/* ===== NEW STICKY HEADER ===== */
+.new-header{
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 
-/* When scrolling */
-header.scrolled{
-  background:#2c003e;
-  padding:15px 20px;
-  box-shadow:0 4px 10px rgba(0,0,0,0.3);
-}
-
-header h1 {
-  margin: 0;
-  font-size: 32px;
-}
-
-header p {
-  margin-top: 5px;
-  font-size: 18px;
-}
-/* ===== NEW HEADER STYLE ===== */
-.new-header {
-  background-color: #6A0DAD; /* flat purple, NO gradient */
+  background: #6A0DAD; /* flat purple */
   color: white;
+
+  padding: 15px 10px;
   text-align: center;
-  padding: 20px 0;
-  position: relative;
+
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
 }
 
-.new-header .logo h1 {
-  font-size: 28px;
-  margin: 0;
-}
-
-.new-header .logo h1 .shop {
-  font-size: 24px;
-  display: block;
-  margin-top: 5px;
-}
-
-.new-header .logo p {
-  font-size: 14px;
-  margin: 5px 0 15px 0;
-}
-
-.new-header .top-nav {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.new-header .top-nav a {
-  text-decoration: none;
-  color: white;
-  font-size: 14px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.new-header .top-nav a span {
-  font-size: 20px;
-}
-
-.new-header .dark-toggle {
+/* Dark mode button (TOP LEFT) */
+.dark-toggle{
   position: absolute;
+  left: 10px;
   top: 15px;
-  left: 15px; /* moved to top-left */
-  background: #FFA500; /* flat orange button */
+
+  background: #ff7a00;
   border: none;
   color: white;
-  padding: 8px 12px;
+
+  padding: 6px 10px;
   border-radius: 6px;
   cursor: pointer;
+}
+
+/* Logo */
+.new-header h1{
+  margin: 0;
+  font-size: 22px;
+  line-height: 1.2;
+}
+
+.new-header .hub{
+  color: #ff7a00; /* orange */
+  font-size: 18px;
+}
+
+/* Tagline */
+.new-header p{
+  margin: 5px 0 10px;
+  font-size: 13px;
+}
+
+/* NAV MENU */
+.top-nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0 5px;
+}
+
+.top-nav a{
+  flex: 1;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  font-size: 12px;
+}
+
+.top-nav a span{
+  display: block;
+  font-size: 18px;
 }
 /* Menu Button */
 .menu-toggle{
