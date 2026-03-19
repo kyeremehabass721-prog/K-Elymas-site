@@ -7,23 +7,22 @@ body {
 }
 
 /* ===== HEADER ===== */
-.new-header{
-  position: sticky;
+.new-header {
+  position: fixed;  /* 🔹 always stays at top */
   top: 0;
+  left: 0;
+  width: 100%;      /* 🔹 make full width */
   z-index: 1000;
-
-  position: relative; /* ✅ ADD THIS LINE */
 
   background: #6A0DAD;
   color: white;
 
   padding: 20px 10px 10px 50px;
-
   text-align: center;
-
   box-shadow: 0 3px 10px rgba(0,0,0,0.2);
   border-bottom: 4px solid #ff7a00;
 }
+
 /* ===== DARK BUTTON (VERY FAR LEFT) ===== */
 .dark-toggle{
   position: absolute;
