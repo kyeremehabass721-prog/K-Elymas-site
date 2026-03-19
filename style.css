@@ -1,46 +1,63 @@
 /* General Styles */
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  margin: 0;
-  background: #f5f6fa;
-  text-align: center;
-
-  padding-top: 120px; /* Add this line */
-}
-
 /* ===== HEADER ===== */
-
 .new-header {
-  position: fixed;
+  position: fixed;      /* stays at top */
   top: 0;
   left: 0;
   width: 100%;
   z-index: 1000;
+
   background: #6A0DAD;
   color: white;
-  padding: 15px 10px;
+
+  padding: 15px 10px;   /* header padding */
   text-align: center;
   box-sizing: border-box;
   border-bottom: 4px solid #ff7a00;
+  height: 60px;          /* fixed header height */
 }
-/* ===== DARK BUTTON (VERY FAR LEFT) ===== */
+
+/* ===== DARK MODE BUTTON ===== */
 .dark-toggle{
   position: absolute;
-
-  left: 5px;   /* push to real edge */
+  left: 5px;
   top: 5px;
 
   background: #ff7a00;
   border: none;
   color: white;
 
-  padding: 6px 10px;
+  padding: 4px 6px;      /* smaller */
+  font-size: 12px;       /* smaller font */
   border-radius: 6px;
   cursor: pointer;
 
-  z-index: 2000; /* make sure nothing blocks it */
+  z-index: 2000;          /* above header */
 }
 
+/* ===== WELCOME BAR ===== */
+.welcome-bar {
+  position: fixed;
+  top: 60px;              /* immediately below header */
+  left: 0;
+  width: 100%;
+  background: #ff7a00;
+  color: white;
+  padding: 6px 0;
+  font-size: 14px;
+  text-align: center;
+  z-index: 999;           /* above content but below header if needed */
+}
+
+/* ===== BODY SPACING ===== */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  background: #f5f6fa;
+  text-align: center;
+
+  padding-top: 90px;      /* header + welcome bar height (60 + 30px) */
+}
 /* ===== LOGO ===== */
 .new-header h1{
   margin: 0;
@@ -248,19 +265,6 @@ body {
 }
 
 /* WELCOME BAR */
-.welcome-bar {
-  position: fixed;
-  top: 60px; /* height of your header, adjust if header is taller */
-  left: 0;
-  width: 100%;
-  background: #ff7a00;
-  color: white;
-  padding: 6px 0;
-  font-size: 14px;
-  text-align: center;
-  z-index: 1001; /* above the header */
-}
-
 .scroll-text{
   display:inline-block;
   white-space:nowrap;
