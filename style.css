@@ -36,17 +36,18 @@
 }
 
 /* ===== WELCOME BAR ===== */
+/* WELCOME BAR */
 .welcome-bar {
-  position: fixed;
-  top: 60px;              /* immediately below header */
-  left: 0;
+  position: relative;  /* change from fixed */
+  top: auto;           /* remove top positioning */
+  left: auto;
   width: 100%;
   background: #ff7a00;
   color: white;
   padding: 6px 0;
   font-size: 14px;
   text-align: center;
-  z-index: 999;           /* above content but below header if needed */
+  z-index: 1;          /* no need for high z-index now */
 }
 
 /* ===== BODY SPACING ===== */
@@ -56,7 +57,7 @@ body {
   background: #f5f6fa;
   text-align: center;
 
-  padding-top: 105px;      /* header + welcome bar height (60 + 30px) */
+  padding-top: 90px;      /* header + welcome bar height (60 + 30px) */
 }
 /* ===== LOGO ===== */
 .new-header h1{
