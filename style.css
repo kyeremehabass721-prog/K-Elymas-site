@@ -251,15 +251,18 @@ body {
 }
 
 /* WELCOME BAR */
-.welcome-bar{
-  width:100%;
-  background:#ff7a00;
-  color:white;
-  overflow:hidden;
-  padding:6px 0;
-  font-size:14px;
-  position:relative;
-  z-index:1;
+.welcome-bar {
+  position: fixed;
+  top: 60px;  /* adjust based on header height */
+  left: 0;
+  width: 100%;
+  background: #ff7a00;
+  color: white;
+  overflow: hidden;
+  padding: 6px 0;
+  font-size: 14px;
+  z-index: 1001; /* above header just in case */
+  text-align: center;
 }
 
 .scroll-text{
