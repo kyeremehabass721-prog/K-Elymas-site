@@ -250,16 +250,15 @@ body {
 /* WELCOME BAR */
 .welcome-bar {
   position: fixed;
-  top: 60px;  /* adjust based on header height */
+  top: 60px; /* height of your header, adjust if header is taller */
   left: 0;
   width: 100%;
   background: #ff7a00;
   color: white;
-  overflow: hidden;
   padding: 6px 0;
   font-size: 14px;
-  z-index: 1001; /* above header just in case */
   text-align: center;
+  z-index: 1001; /* above the header */
 }
 
 .scroll-text{
