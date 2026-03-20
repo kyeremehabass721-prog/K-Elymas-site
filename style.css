@@ -883,3 +883,48 @@ transition: 0.3s;
 background-color: #e06b00;
 
 }
+/* ===== FULL DARK MODE FIX ===== */
+
+body.dark{
+  background:#121212;
+  color:#ffffff;
+}
+
+/* Sections */
+body.dark .biography,
+body.dark .education,
+body.dark .school,
+body.dark .book,
+body.dark .preview-content{
+  background:#1e1e1e;
+  color:white;
+}
+
+/* Book overlay */
+body.dark .book-info{
+  background:linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0));
+}
+
+/* Inputs */
+body.dark input{
+  background:#2a2a2a;
+  color:white;
+  border:1px solid #444;
+}
+
+/* Buttons */
+body.dark .button,
+body.dark #answers button{
+  background:#ff7a00;
+  color:white;
+}
+
+/* Footer */
+body.dark footer{
+  background:#000;
+}
+
+/* Header stays same but slightly darker */
+body.dark .new-header{
+  background:#4b0082;
+}
