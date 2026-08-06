@@ -928,3 +928,7 @@ body.dark footer{
 body.dark .new-header{
   background:#4b0082;
 }
+.education h2,
+#bible h2 {
+  color: white;
+}
