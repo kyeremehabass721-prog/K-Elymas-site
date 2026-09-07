@@ -1,452 +1,287 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Kyeremeh Abass | Author</title>
-
-<link rel="stylesheet" href="style.css">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kyeremeh Abass | Author – Elymas Digital Hub</title>
+  <meta name="description" content="Official site of Kyeremeh Abass – Ghanaian Christian & inspirational author. Discover books, daily Bible verses, quizzes and more.">
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+
+<!-- HEADER -->
 <header class="new-header">
+  <div class="header-left">
+    <button class="dark-toggle" onclick="toggleDarkMode()" aria-label="Toggle dark mode">🌙</button>
+    <div class="logo-block">
+      <h1>ELYMAS DIGITAL<br><span class="hub">✨ HUB</span></h1>
+      <p>Books • Bible • AI • Inspiration</p>
+    </div>
+  </div>
 
-<button class="dark-toggle" onclick="toggleDarkMode()">🌙</button>
-
-<h1>
-  ELYMAS DIGITAL<br>
-  <span class="hub">✨ HUB</span>
-</h1>
-
-<p>Books • Bible • Elymas AI • Inspiration</p>
-
-<nav class="top-nav">
-
-  <a href="#home">
-    <span>🏠</span>
-    Home
-  </a>
-
-  <a href="#books">
-    <span>📚</span>
-    Books
-  </a>
-
-  <a href="#bible">
-    <span>📖</span>
-    Bible
-  </a>
-
-  <a href="#" onclick="openAI()">
-    <span>🤖</span>
-    Ask
-  </a>
-
-  <a href="#quiz">
-    <span>📝</span>
-    Quiz
-  </a>
-
-  <a href="#message">
-    <span>✉️</span>
-    Message
-  </a>
-
-</nav>
-
+  <nav class="top-nav">
+    <a href="#home"><span>🏠</span>Home</a>
+    <a href="#books"><span>📚</span>Books</a>
+    <a href="#bible"><span>📖</span>Bible</a>
+    <a href="#" onclick="openAI(); return false;"><span>🤖</span>Ask</a>
+    <a href="#quiz"><span>📝</span>Quiz</a>
+    <a href="#message"><span>✉️</span>Message</a>
+  </nav>
 </header>
+
+<!-- Scrolling welcome bar -->
 <div class="welcome-bar">
   <div class="scroll-text">
-    WELCOME TO ELYMAS’ BOOK SHOP 📚 | Discover powerful Christian and inspirational books ✨ | Chat with our AI assistant 🤖 | Contact our Manager and Assistant Manager 💬 | Fast and secure MoMo payment available 💳
+    WELCOME TO ELYMAS’ BOOK SHOP 📚 &nbsp;|&nbsp; Discover powerful Christian and inspirational books ✨ &nbsp;|&nbsp; Chat with our AI assistant 🤖 &nbsp;|&nbsp; Contact our Manager and Assistant Manager 💬 &nbsp;|&nbsp; Fast and secure MoMo payment available 💳
   </div>
 </div>
-<section id="home" class="biography">
 
-<h2>About the Author</h2>
-
-<img src="images/file_000000008dc081f4be2d5ef8f67c47e7~2.png" class="author-photo">
-
-<p>Kyeremeh Abass is a Ghanaian inspirational and Christian author whose writings focus on faith, purpose and personal growth.</p>
-
-</section>
-  <section class="education">
-
-<h2>Educational Background</h2>
-
-<div class="school">
-  <h3 class="level">SENIOR HIGH SCHOOL</h3>
-  <p class="school-name">Okomfo Anokye Senior High School</p>
-  <span>Completed: 2025</span>
-</div>
-
-<div class="school">
-  <h3 class="level">JUNIOR HIGH SCHOOL</h3>
-  <p class="school-name">Life Educational Complex</p>
-  <span>Completed: 2022</span>
-</div>
-
-</section>
-
-<section class="biography">
-
-<h2>Daily Bible Verse</h2>
-
-<p id="verse">Loading verse...</p>
-</section>
-<div style="text-align:center; margin:20px;">
-  <input 
-    type="text" 
-    id="searchInput" 
-    placeholder="🔍 Search books..." 
-    onkeyup="searchBooks()"
-    style="padding:10px; width:80%; max-width:300px; border-radius:8px; border:1px solid #ccc;"
-  >
-</div>
-  <section id="books" class="books">
-  <!-- Book 1 -->
-  <div class="book">
-    
-    <div class="badges">
-      <span class="hot">🔥 HOT</span>
-      <span class="heart" onclick="toggleHeart(this)">❤️</span>
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <h2>Faith. Purpose. Growth.</h2>
+    <p>Powerful Christian & inspirational books by Kyeremeh Abass – written to strengthen your walk with God and unlock the purpose within you.</p>
+    <div class="hero-buttons">
+      <a href="#books" class="btn btn-primary">📚 Browse Books</a>
+      <a href="#message" class="btn btn-secondary">💬 Contact Us</a>
     </div>
+  </div>
+</section>
 
-    <img src="images/savedbygrace.jpg" alt="Saved by Grace"
-onclick="openPreview(
-'Saved by Grace',
-'A powerful Christian book about salvation and the transforming grace of God in the life of every believer.',
-'images/savedbygrace.jpg'
-)">
-
-    <div class="book-info">
-      <h3>Saved by Grace</h3>
-      <p class="price">GH₵30</p>
-      <p>
-        A powerful Christian book about salvation and the transforming grace of God in the life of every believer.
-      </p>
-      <a class="button" href="#message">Buy with MoMo</a>
+<!-- ABOUT -->
+<section id="home" class="section">
+  <h2 class="section-title">About the Author</h2>
+  <div class="card about-grid">
+    <img src="images/file_000000008dc081f4be2d5ef8f67c47e7~2.png" alt="Kyeremeh Abass" class="author-photo">
+    <div class="about-text">
+      <p>Kyeremeh Abass is a Ghanaian inspirational and Christian author whose writings focus on faith, purpose and personal growth. Through his books he encourages readers to discover God’s grace, walk in excellence, and shine the light placed within every believer.</p>
     </div>
+  </div>
+</section>
 
+<!-- EDUCATION -->
+<section class="section">
+  <h2 class="section-title">Educational Background</h2>
+  <div class="education-grid">
+    <div class="school-card">
+      <div class="level">Senior High School</div>
+      <div class="school-name">Okomfo Anokye Senior High School</div>
+      <div class="year">Completed: 2025</div>
+    </div>
+    <div class="school-card">
+      <div class="level">Junior High School</div>
+      <div class="school-name">Life Educational Complex</div>
+      <div class="year">Completed: 2022</div>
+    </div>
+  </div>
+</section>
+
+<!-- DAILY VERSE -->
+<section class="section">
+  <h2 class="section-title">Daily Bible Verse</h2>
+  <div class="verse-card">
+    <p id="verse">Loading verse...</p>
+  </div>
+</section>
+
+<!-- BOOKS -->
+<section id="books" class="section">
+  <h2 class="section-title">Featured Books</h2>
+
+  <div class="search-wrap">
+    <input type="text" id="searchInput" placeholder="Search books..." onkeyup="searchBooks()">
   </div>
 
-  <!-- Book 2 -->
-  <div class="book">
-
-    <div class="badges">
-      <span class="hot">🔥 HOT</span>
-      <span class="heart" onclick="toggleHeart(this)">❤️</span>
+  <div class="books">
+    <!-- Book 1 -->
+    <div class="book">
+      <div class="badges">
+        <span class="hot">🔥 HOT</span>
+        <span class="heart" onclick="toggleHeart(this)">❤️</span>
+      </div>
+      <img src="images/savedbygrace.jpg" alt="Saved by Grace"
+           onclick="openPreview('Saved by Grace','A powerful Christian book about salvation and the transforming grace of God in the life of every believer.','images/savedbygrace.jpg')">
+      <div class="book-info">
+        <h3>Saved by Grace</h3>
+        <p class="price">GH₵30</p>
+        <p>A powerful Christian book about salvation and the transforming grace of God in the life of every believer.</p>
+        <a class="button" href="#message">Buy with MoMo</a>
+      </div>
     </div>
 
-    <img src="images/purpose.jpg" alt="When Purpose Meets Excellence"
-onclick="openPreview(
-'When Purpose Meets Excellence',
-'An inspirational book that teaches how discovering purpose and pursuing excellence can transform your life.',
-'images/purpose.jpg'
-)">
-
-    <div class="book-info">
-      <h3>When Purpose Meets Excellence</h3>
-      <p class="price">GH₵40</p>
-      <p>
-        An inspirational book that teaches how discovering purpose and pursuing excellence can transform your life.
-      </p>
-      <a class="button" href="#message">Buy with MoMo</a>
+    <!-- Book 2 -->
+    <div class="book">
+      <div class="badges">
+        <span class="hot">🔥 HOT</span>
+        <span class="heart" onclick="toggleHeart(this)">❤️</span>
+      </div>
+      <img src="images/purpose.jpg" alt="When Purpose Meets Excellence"
+           onclick="openPreview('When Purpose Meets Excellence','An inspirational book that teaches how discovering purpose and pursuing excellence can transform your life.','images/purpose.jpg')">
+      <div class="book-info">
+        <h3>When Purpose Meets Excellence</h3>
+        <p class="price">GH₵40</p>
+        <p>An inspirational book that teaches how discovering purpose and pursuing excellence can transform your life.</p>
+        <a class="button" href="#message">Buy with MoMo</a>
+      </div>
     </div>
 
+    <!-- Book 3 -->
+    <div class="book">
+      <div class="badges">
+        <span class="hot">🔥 HOT</span>
+        <span class="heart" onclick="toggleHeart(this)">❤️</span>
+      </div>
+      <img src="images/thelightwithin.jpg" alt="The Light Within"
+           onclick="openPreview('The Light Within','A Christian inspirational book revealing the light God has placed within every believer.','images/thelightwithin.jpg')">
+      <div class="book-info">
+        <h3>The Light Within</h3>
+        <p class="price">GH₵30</p>
+        <p>A Christian inspirational book revealing the light God has placed within every believer.</p>
+        <a class="button" href="#message">Buy with MoMo</a>
+      </div>
+    </div>
   </div>
+</section>
 
-  <!-- Book 3 -->
-  <div class="book">
+<!-- BIBLE READER -->
+<section id="bible" class="section">
+  <h2 class="section-title">📖 Full Bible Reader</h2>
+  <div class="card">
+    <div class="controls">
+      <select id="bookSelect">
+        <!-- OLD TESTAMENT -->
+        <option value="genesis">Genesis</option>
+        <option value="exodus">Exodus</option>
+        <option value="leviticus">Leviticus</option>
+        <option value="numbers">Numbers</option>
+        <option value="deuteronomy">Deuteronomy</option>
+        <option value="joshua">Joshua</option>
+        <option value="judges">Judges</option>
+        <option value="ruth">Ruth</option>
+        <option value="1 samuel">1 Samuel</option>
+        <option value="2 samuel">2 Samuel</option>
+        <option value="1 kings">1 Kings</option>
+        <option value="2 kings">2 Kings</option>
+        <option value="1 chronicles">1 Chronicles</option>
+        <option value="2 chronicles">2 Chronicles</option>
+        <option value="ezra">Ezra</option>
+        <option value="nehemiah">Nehemiah</option>
+        <option value="esther">Esther</option>
+        <option value="job">Job</option>
+        <option value="psalms">Psalms</option>
+        <option value="proverbs">Proverbs</option>
+        <option value="ecclesiastes">Ecclesiastes</option>
+        <option value="song of solomon">Song of Solomon</option>
+        <option value="isaiah">Isaiah</option>
+        <option value="jeremiah">Jeremiah</option>
+        <option value="lamentations">Lamentations</option>
+        <option value="ezekiel">Ezekiel</option>
+        <option value="daniel">Daniel</option>
+        <option value="hosea">Hosea</option>
+        <option value="joel">Joel</option>
+        <option value="amos">Amos</option>
+        <option value="obadiah">Obadiah</option>
+        <option value="jonah">Jonah</option>
+        <option value="micah">Micah</option>
+        <option value="nahum">Nahum</option>
+        <option value="habakkuk">Habakkuk</option>
+        <option value="zephaniah">Zephaniah</option>
+        <option value="haggai">Haggai</option>
+        <option value="zechariah">Zechariah</option>
+        <option value="malachi">Malachi</option>
+        <!-- NEW TESTAMENT -->
+        <option value="matthew">Matthew</option>
+        <option value="mark">Mark</option>
+        <option value="luke">Luke</option>
+        <option value="john">John</option>
+        <option value="acts">Acts</option>
+        <option value="romans">Romans</option>
+        <option value="1 corinthians">1 Corinthians</option>
+        <option value="2 corinthians">2 Corinthians</option>
+        <option value="galatians">Galatians</option>
+        <option value="ephesians">Ephesians</option>
+        <option value="philippians">Philippians</option>
+        <option value="colossians">Colossians</option>
+        <option value="1 thessalonians">1 Thessalonians</option>
+        <option value="2 thessalonians">2 Thessalonians</option>
+        <option value="1 timothy">1 Timothy</option>
+        <option value="2 timothy">2 Timothy</option>
+        <option value="titus">Titus</option>
+        <option value="philemon">Philemon</option>
+        <option value="hebrews">Hebrews</option>
+        <option value="james">James</option>
+        <option value="1 peter">1 Peter</option>
+        <option value="2 peter">2 Peter</option>
+        <option value="1 john">1 John</option>
+        <option value="2 john">2 John</option>
+        <option value="3 john">3 John</option>
+        <option value="jude">Jude</option>
+        <option value="revelation">Revelation</option>
+      </select>
 
-    <div class="badges">
-      <span class="hot">🔥 HOT</span>
-      <span class="heart" onclick="toggleHeart(this)">❤️</span>
+      <input type="number" id="chapterInput" placeholder="Chapter" min="1">
+      <button onclick="loadBible()">Read</button>
     </div>
 
-    <img src="images/thelightwithin.jpg" alt="The Light Within"
-onclick="openPreview(
-'The Light Within',
-'A Christian inspirational book revealing the light God has placed within every believer.',
-'images/thelightwithin.jpg'
-)">
-
-    <div class="book-info">
-      <h3>The Light Within</h3>
-      <p class="price">GH₵30</p>
-      <p>
-        A Christian inspirational book revealing the light God has placed within every believer.
-      </p>
-      <a class="button" href="#message">Buy with MoMo</a>
+    <div class="controls" style="margin-top: 8px;">
+      <input id="searchBible" placeholder="Quick search e.g. John 3:16" style="flex:1; min-width:200px;">
+      <button onclick="searchBible()">Search</button>
     </div>
 
+    <div id="bibleText"></div>
   </div>
-
-</section>
-<section id="bible" class="biography">
-
-<h2>📖 Full Bible Reader</h2>
-
-<select id="bookSelect">
-
-<!-- OLD TESTAMENT -->
-
-<option value="genesis">Genesis</option>
-<option value="exodus">Exodus</option>
-<option value="leviticus">Leviticus</option>
-<option value="numbers">Numbers</option>
-<option value="deuteronomy">Deuteronomy</option>
-<option value="joshua">Joshua</option>
-<option value="judges">Judges</option>
-<option value="ruth">Ruth</option>
-<option value="1 samuel">1 Samuel</option>
-<option value="2 samuel">2 Samuel</option>
-<option value="1 kings">1 Kings</option>
-<option value="2 kings">2 Kings</option>
-<option value="1 chronicles">1 Chronicles</option>
-<option value="2 chronicles">2 Chronicles</option>
-<option value="ezra">Ezra</option>
-<option value="nehemiah">Nehemiah</option>
-<option value="esther">Esther</option>
-<option value="job">Job</option>
-<option value="psalms">Psalms</option>
-<option value="proverbs">Proverbs</option>
-<option value="ecclesiastes">Ecclesiastes</option>
-<option value="song of solomon">Song of Solomon</option>
-<option value="isaiah">Isaiah</option>
-<option value="jeremiah">Jeremiah</option>
-<option value="lamentations">Lamentations</option>
-<option value="ezekiel">Ezekiel</option>
-<option value="daniel">Daniel</option>
-<option value="hosea">Hosea</option>
-<option value="joel">Joel</option>
-<option value="amos">Amos</option>
-<option value="obadiah">Obadiah</option>
-<option value="jonah">Jonah</option>
-<option value="micah">Micah</option>
-<option value="nahum">Nahum</option>
-<option value="habakkuk">Habakkuk</option>
-<option value="zephaniah">Zephaniah</option>
-<option value="haggai">Haggai</option>
-<option value="zechariah">Zechariah</option>
-<option value="malachi">Malachi</option>
-
-<!-- NEW TESTAMENT -->
-
-<option value="matthew">Matthew</option>
-<option value="mark">Mark</option>
-<option value="luke">Luke</option>
-<option value="john">John</option>
-<option value="acts">Acts</option>
-<option value="romans">Romans</option>
-<option value="1 corinthians">1 Corinthians</option>
-<option value="2 corinthians">2 Corinthians</option>
-<option value="galatians">Galatians</option>
-<option value="ephesians">Ephesians</option>
-<option value="philippians">Philippians</option>
-<option value="colossians">Colossians</option>
-<option value="1 thessalonians">1 Thessalonians</option>
-<option value="2 thessalonians">2 Thessalonians</option>
-<option value="1 timothy">1 Timothy</option>
-<option value="2 timothy">2 Timothy</option>
-<option value="titus">Titus</option>
-<option value="philemon">Philemon</option>
-<option value="hebrews">Hebrews</option>
-<option value="james">James</option>
-<option value="1 peter">1 Peter</option>
-<option value="2 peter">2 Peter</option>
-<option value="1 john">1 John</option>
-<option value="2 john">2 John</option>
-<option value="3 john">3 John</option>
-<option value="jude">Jude</option>
-<option value="revelation">Revelation</option>
-
-</select>
-
-<input type="number" id="chapterInput" placeholder="Chapter">
-
-<button onclick="loadBible()">Read</button>
-
-<div id="bibleText"></div>
-
-</section>
-<section id="quiz" class="biography">
-
-<h2>❓ Bible Quiz</h2>
-
-<!-- NORMAL QUIZ -->
-<p id="question">Loading question...</p>
-<div id="answers"></div>
-<p id="result"></p>
-<button onclick="loadQuestion()">Next Question</button>
-
-<hr>
-
-<!-- AI QUIZ -->
-<h3>🤖 AI Quiz</h3>
-<button onclick="generateAI()">Generate Question</button>
-
-<p id="aiQuestion">Click the button to get a question</p>
-<div id="aiAnswers"></div>
-<p id="aiResult"></p>
-
-</section>
-<h2>Read the Bible</h2>
-
-<input id="searchBible" placeholder="Example: John 3:16">
-
-<button onclick="searchBible()">Search</button>
-
-<div id="bibleText"></div>
-
 </section>
 
-<section id="message" class="biography">
+<!-- QUIZ -->
+<section id="quiz" class="section">
+  <h2 class="section-title">❓ Bible Quiz</h2>
+  <div class="card">
+    <p id="question" style="font-size:1.1rem; font-weight:600; margin-bottom:12px;">Loading question...</p>
+    <div id="answers"></div>
+    <p id="result"></p>
+    <button class="quiz-btn" onclick="loadQuestion()" style="margin-top:16px;">Next Question</button>
 
-<h2>Message</h2>
+    <hr style="margin:28px 0; border:none; border-top:1px solid var(--border);">
 
-<p>Choose who you want to contact:</p>
-
-<a class="button" href="https://wa.me/233536782743" target="_blank">
-Message Manager
-</a>
-
-<br><br>
-
-<a class="button" href="https://wa.me/233534157964" target="_blank">
-Message Assistant Manager
-</a>
-
+    <h3 style="font-family:'Poppins',sans-serif; margin-bottom:12px;">🤖 AI Quiz</h3>
+    <button class="quiz-btn" onclick="generateAI()">Generate Question</button>
+    <p id="aiQuestion" style="margin-top:14px; font-weight:500;">Click the button to get a question</p>
+    <div id="aiAnswers"></div>
+    <p id="aiResult"></p>
+  </div>
 </section>
+
+<!-- MESSAGE -->
+<section id="message" class="section">
+  <h2 class="section-title">Message Us</h2>
+  <div class="card" style="text-align:center;">
+    <p style="margin-bottom:20px; color:var(--text-muted);">Choose who you want to contact via WhatsApp:</p>
+    <div class="message-buttons">
+      <a class="button" href="https://wa.me/233536782743" target="_blank" rel="noopener">
+        💬 Message Manager
+      </a>
+      <a class="button" href="https://wa.me/233534157964" target="_blank" rel="noopener">
+        💬 Message Assistant Manager
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
 <footer>
-
-<p><strong>Contact:</strong> +233 536 782 743 / +233 559 290 860</p>
-
-<div class="payment-methods">
-  <img src="images/mtn.jpg" alt="MTN MoMo">
-  <img src="images/telecel.jpg" alt="Telecel Cash">
-  <img src="images/airteltigo.jpg" alt="AirtelTigo Money">
-</div>
-
-<p>© 2026 Kyeremeh Abass</p>
-
+  <p><strong>Contact:</strong> +233 536 782 743 / +233 559 290 860</p>
+  <div class="payment-methods">
+    <img src="images/mtn.jpg" alt="MTN MoMo">
+    <img src="images/telecel.jpg" alt="Telecel Cash">
+    <img src="images/airteltigo.jpg" alt="AirtelTigo Money">
+  </div>
+  <p class="copyright">© 2026 Kyeremeh Abass · Elymas Digital Hub</p>
 </footer>
 
-<script>
+<!-- WhatsApp floating button -->
+<a href="https://wa.me/233536782743" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Chat on WhatsApp">💬</a>
 
-function toggleMenu(){
-
-let menu=document.getElementById("menu");
-
-menu.classList.toggle("show");
-
-}
-
-fetch("https://bible-api.com/?random=verse")
-
-.then(res=>res.json())
-
-.then(data=>{
-
-document.getElementById("verse").innerText=data.reference+" - "+data.text;
-
-});
-
-function searchBible(){
-
-let q=document.getElementById("searchBible").value;
-
-fetch("https://bible-api.com/"+q)
-
-.then(res=>res.json())
-
-.then(data=>{
-
-let text="";
-
-data.verses.forEach(v=>{
-
-text+="<p>"+v.verse+" "+v.text+"</p>";
-
-});
-
-document.getElementById("bibleText").innerHTML=text;
-
-});
-
-}
-
-</script>
-<script>
-(function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="kD7EM6DkZg-59YEqXBrV4";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
-</script>
-<script>
-function toggleMenu(){
-  document.getElementById("menu").classList.toggle("show");
-}
-</script>
-<a href="https://wa.me/233536782743" target="_blank" class="whatsapp-float">
-  💬
-</a>
-<script>
-window.addEventListener("scroll", function(){
-  const header = document.querySelector("header");
-
-  if(window.scrollY > 50){
-    header.classList.add("scrolled");
-  } else {
-    header.classList.remove("scrolled");
-  }
-});
-</script>
-<script>
-function toggleDarkMode(){
-  document.body.classList.toggle("dark");
-}
-</script>
-<script>
-const elements = document.querySelectorAll(".biography, .education, .book");
-
-window.addEventListener("scroll", () => {
-  elements.forEach(el => {
-    const position = el.getBoundingClientRect().top;
-    if (position < window.innerHeight - 100) {
-      el.classList.add("show");
-    }
-  });
-});
-</script>
-<script>
-document.addEventListener("DOMContentLoaded", function(){
-
-  document.querySelectorAll(".heart").forEach(function(heart){
-    
-    heart.addEventListener("click", function(){
-      this.classList.toggle("liked");
-    });
-
-  });
-
-});
-</script>
-<script>
-function searchBooks(){
-  let input = document.getElementById("searchInput").value.toLowerCase();
-  let books = document.querySelectorAll(".book");
-
-  books.forEach(book => {
-    let title = book.querySelector("h3").innerText.toLowerCase();
-
-    if(title.includes(input)){
-      book.style.display = "block";
-    } else {
-      book.style.display = "none";
-    }
-  });
-}
-</script>
+<!-- Preview Modal -->
 <div id="previewModal" class="preview-modal">
   <div class="preview-content">
     <span class="close-btn" onclick="closePreview()">&times;</span>
@@ -455,163 +290,206 @@ function searchBooks(){
     <p id="previewDesc"></p>
   </div>
 </div>
+
+<!-- ========== SCRIPTS ========== -->
 <script>
-function openPreview(title, desc, img){
-  document.getElementById("previewTitle").innerText = title;
-  document.getElementById("previewDesc").innerText = desc;
-  document.getElementById("previewImg").src = img;
-
-  document.getElementById("previewModal").style.display = "flex";
-}
-
-function closePreview(){
-  document.getElementById("previewModal").style.display = "none";
-}
-</script>
-<script>
-function loadBible(){
-  let book = document.getElementById("bookSelect").value;
-  let chapter = document.getElementById("chapterInput").value;
-
-  if(!chapter){
-    alert("Please enter chapter number");
-    return;
+  // Dark mode
+  function toggleDarkMode() {
+    document.body.classList.toggle("dark");
+    localStorage.setItem("elyas-dark", document.body.classList.contains("dark") ? "1" : "0");
+  }
+  // Restore preference
+  if (localStorage.getItem("elyas-dark") === "1") {
+    document.body.classList.add("dark");
   }
 
-  fetch(`https://bible-api.com/${book} ${chapter}`)
-  .then(res => res.json())
-  .then(data => {
-
-    let text = `<h3>${data.reference}</h3>`;
-
-    data.verses.forEach(v=>{
-      text += `<p><strong>${v.verse}</strong> ${v.text}</p>`;
+  // Daily verse
+  fetch("https://bible-api.com/?random=verse")
+    .then(res => res.json())
+    .then(data => {
+      document.getElementById("verse").innerText = data.reference + " — " + data.text;
+    })
+    .catch(() => {
+      document.getElementById("verse").innerText = "John 3:16 — For God so loved the world...";
     });
 
-    document.getElementById("bibleText").innerHTML = text;
+  // Search Bible (verse lookup)
+  function searchBible() {
+    let q = document.getElementById("searchBible").value.trim();
+    if (!q) return;
+    fetch("https://bible-api.com/" + encodeURIComponent(q))
+      .then(res => res.json())
+      .then(data => {
+        if (data.error) {
+          document.getElementById("bibleText").innerHTML = "<p>Could not find that passage.</p>";
+          return;
+        }
+        let text = `<h3>${data.reference}</h3>`;
+        if (data.verses) {
+          data.verses.forEach(v => {
+            text += `<p><strong>${v.verse}</strong> ${v.text}</p>`;
+          });
+        } else {
+          text += `<p>${data.text}</p>`;
+        }
+        document.getElementById("bibleText").innerHTML = text;
+      })
+      .catch(() => {
+        document.getElementById("bibleText").innerHTML = "<p>Error loading passage. Please try again.</p>";
+      });
+  }
 
+  // Load full chapter
+  function loadBible() {
+    let book = document.getElementById("bookSelect").value;
+    let chapter = document.getElementById("chapterInput").value;
+    if (!chapter) {
+      alert("Please enter a chapter number");
+      return;
+    }
+    fetch(`https://bible-api.com/${encodeURIComponent(book)} ${chapter}`)
+      .then(res => res.json())
+      .then(data => {
+        if (data.error) {
+          document.getElementById("bibleText").innerHTML = "<p>Chapter not found.</p>";
+          return;
+        }
+        let text = `<h3>${data.reference}</h3>`;
+        data.verses.forEach(v => {
+          text += `<p><strong>${v.verse}</strong> ${v.text}</p>`;
+        });
+        document.getElementById("bibleText").innerHTML = text;
+      })
+      .catch(() => {
+        document.getElementById("bibleText").innerHTML = "<p>Error loading chapter.</p>";
+      });
+  }
+
+  // Open Chatbase AI
+  function openAI() {
+    if (window.chatbase) {
+      window.chatbase("open");
+    }
+  }
+
+  // Heart toggle
+  function toggleHeart(el) {
+    el.classList.toggle("liked");
+  }
+
+  // Book search
+  function searchBooks() {
+    let input = document.getElementById("searchInput").value.toLowerCase();
+    document.querySelectorAll(".book").forEach(book => {
+      let title = book.querySelector("h3").innerText.toLowerCase();
+      book.style.display = title.includes(input) ? "flex" : "none";
+    });
+  }
+
+  // Preview modal
+  function openPreview(title, desc, img) {
+    document.getElementById("previewTitle").innerText = title;
+    document.getElementById("previewDesc").innerText = desc;
+    document.getElementById("previewImg").src = img;
+    document.getElementById("previewModal").style.display = "flex";
+  }
+  function closePreview() {
+    document.getElementById("previewModal").style.display = "none";
+  }
+
+  // Scroll animations
+  const animated = document.querySelectorAll(".section, .book, .card, .school-card, .verse-card");
+  window.addEventListener("scroll", () => {
+    animated.forEach(el => {
+      if (el.getBoundingClientRect().top < window.innerHeight - 80) {
+        el.classList.add("show");
+      }
+    });
   });
-}
+  // Trigger once on load
+  window.addEventListener("load", () => {
+    animated.forEach(el => {
+      if (el.getBoundingClientRect().top < window.innerHeight - 80) {
+        el.classList.add("show");
+      }
+    });
+  });
 </script>
+
+<!-- Chatbase AI -->
 <script>
-function openAI(){
-  if(window.chatbase){
-    window.chatbase("open");
-  } else {
-    alert("AI is loading, please wait...");
-  }
-}
+  (function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="kD7EM6DkZg-59YEqXBrV4";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
 </script>
+
+<!-- Normal Quiz -->
 <script>
-const questions = [
-{ q: "Who created the world?", options: ["God", "Moses", "Noah", "Abraham"], answer: "God" },
-{ q: "Who built the ark?", options: ["Noah", "Moses", "David", "Abraham"], answer: "Noah" },
-{ q: "Who was swallowed by a big fish?", options: ["Jonah", "Peter", "Paul", "Elijah"], answer: "Jonah" },
-{ q: "Where was Jesus born?", options: ["Nazareth", "Bethlehem", "Jerusalem", "Galilee"], answer: "Bethlehem" },
-{ q: "Who defeated Goliath?", options: ["Saul", "David", "Samuel", "Solomon"], answer: "David" },
-{ q: "How many days did God take to create the world?", options: ["5", "6", "7", "8"], answer: "6" },
-{ q: "Who led the Israelites out of Egypt?", options: ["Moses", "Aaron", "Joshua", "Caleb"], answer: "Moses" },
-{ q: "Who was the first king of Israel?", options: ["Saul", "David", "Solomon", "Samuel"], answer: "Saul" },
-{ q: "Who was known for his wisdom?", options: ["David", "Solomon", "Samuel", "Moses"], answer: "Solomon" },
-{ q: "Who was thrown into the lion's den?", options: ["Daniel", "Shadrach", "Meshach", "Abednego"], answer: "Daniel" },
-{ q: "Who parted the Red Sea?", options: ["Moses", "Aaron", "Joshua", "Elijah"], answer: "Moses" },
-{ q: "Who received the Ten Commandments?", options: ["Moses", "Aaron", "David", "Solomon"], answer: "Moses" },
-{ q: "Who was sold by his brothers into Egypt?", options: ["Joseph", "Benjamin", "Jacob", "Esau"], answer: "Joseph" },
-{ q: "Who was the mother of Samuel?", options: ["Hannah", "Sarah", "Rebekah", "Leah"], answer: "Hannah" },
-{ q: "Who wrestled with an angel?", options: ["Jacob", "Esau", "Moses", "Abraham"], answer: "Jacob" },
-{ q: "Who interpreted Pharaoh's dreams?", options: ["Joseph", "Daniel", "Moses", "Aaron"], answer: "Joseph" },
-{ q: "Who was king after Saul?", options: ["David", "Solomon", "Samuel", "Saul"], answer: "David" },
-{ q: "Who wrote many of the Psalms?", options: ["David", "Moses", "Solomon", "Asaph"], answer: "David" },
-{ q: "Who was the strong man with long hair?", options: ["Samson", "David", "Gideon", "Saul"], answer: "Samson" },
-{ q: "Who was thrown into a fiery furnace?", options: ["Shadrach, Meshach, and Abednego", "Daniel", "Joseph", "Elijah"], answer: "Shadrach, Meshach, and Abednego" },
-{ q: "Who baptized Jesus?", options: ["John the Baptist", "Peter", "Paul", "Moses"], answer: "John the Baptist" },
-{ q: "Who denied Jesus three times?", options: ["Peter", "John", "James", "Andrew"], answer: "Peter" },
-{ q: "Who wrote most of the New Testament letters?", options: ["Paul", "Peter", "John", "James"], answer: "Paul" },
-{ q: "Who was the first Christian martyr?", options: ["Stephen", "James", "Peter", "Paul"], answer: "Stephen" },
-{ q: "Who walked on water?", options: ["Peter", "Jesus", "John", "James"], answer: "Jesus" },
-{ q: "Who betrayed Jesus?", options: ["Judas", "Peter", "John", "James"], answer: "Judas" },
-{ q: "Who was raised from the dead by Jesus?", options: ["Lazarus", "John", "Peter", "Paul"], answer: "Lazarus" },
-{ q: "Who saw a vision of a sheet with animals?", options: ["Peter", "Paul", "John", "Stephen"], answer: "Peter" },
-{ q: "Who wrote the Book of Revelation?", options: ["John", "Paul", "Peter", "James"], answer: "John" },
-{ q: "Who was the disciple that doubted Jesus' resurrection?", options: ["Thomas", "Peter", "John", "James"], answer: "Thomas" },
-{ q: "Who climbed a sycamore tree to see Jesus?", options: ["Zacchaeus", "Matthew", "John", "Peter"], answer: "Zacchaeus" },
-{ q: "Who betrayed Samson?", options: ["Delilah", "Judges", "Ruth", "Miriam"], answer: "Delilah" },
-{ q: "Who was thrown into prison for praying?", options: ["Daniel", "Shadrach", "Meshach", "Abednego"], answer: "Daniel" },
-{ q: "Who was the mother of Jesus?", options: ["Mary", "Elizabeth", "Martha", "Anna"], answer: "Mary" },
-{ q: "Who was Jesus’ earthly father?", options: ["Joseph", "David", "Zacharias", "Simon"], answer: "Joseph" },
-{ q: "Who anointed David as king?", options: ["Samuel", "Saul", "Nathan", "Elijah"], answer: "Samuel" },
-{ q: "Who was thrown into the pit by his brothers?", options: ["Joseph", "Benjamin", "David", "Jacob"], answer: "Joseph" },
-{ q: "Who was the tax collector that followed Jesus?", options: ["Matthew", "Peter", "James", "John"], answer: "Matthew" },
-{ q: "Who wrote the Book of Acts?", options: ["Luke", "Paul", "John", "Peter"], answer: "Luke" },
-{ q: "Who denied Peter in the courtyard?", options: ["Servant girl", "Mary", "John", "James"], answer: "Servant girl" },
-{ q: "Who was commanded to build the tabernacle?", options: ["Moses", "Aaron", "David", "Solomon"], answer: "Moses" },
-{ q: "Who was swallowed by the earth?", options: ["Korah", "Dathan", "Abiram", "Moses"], answer: "Korah" },
-// … Continue adding in the same format until 120+
-];
+  const quizQuestions = [
+    { q: "Who built the ark?", options: ["Noah", "Moses", "Abraham", "David"], answer: "Noah" },
+    { q: "How many disciples did Jesus have?", options: ["10", "12", "7", "3"], answer: "12" },
+    { q: "What is the first book of the Bible?", options: ["Genesis", "Exodus", "Matthew", "Psalms"], answer: "Genesis" },
+    { q: "Who was swallowed by a great fish?", options: ["Jonah", "Peter", "Paul", "Job"], answer: "Jonah" },
+    { q: "Where was Jesus born?", options: ["Bethlehem", "Nazareth", "Jerusalem", "Egypt"], answer: "Bethlehem" },
+    { q: "Who betrayed Jesus?", options: ["Judas", "Peter", "John", "Thomas"], answer: "Judas" },
+    { q: "What did God create on the seventh day?", options: ["Rest", "Animals", "Man", "Light"], answer: "Rest" },
+    { q: "Who was the first man?", options: ["Adam", "Abel", "Cain", "Noah"], answer: "Adam" }
+  ];
 
-function loadQuestion(){
-  const q = questions[Math.floor(Math.random() * questions.length)];
-  document.getElementById("question").innerText = q.q;
-  let html = "";
-  q.options.forEach(option => {
-    html += `<button onclick="checkAnswer('${option}', '${q.answer}')">${option}</button>`;
-  });
-  document.getElementById("answers").innerHTML = html;
-  document.getElementById("result").innerText = "";
-}
-
-function checkAnswer(selected, correct){
-  if(selected === correct){
-    document.getElementById("result").innerText = "✅ Correct!";
-  } else {
-    document.getElementById("result").innerText = "❌ Wrong! Correct answer: " + correct;
+  function loadQuestion() {
+    const q = quizQuestions[Math.floor(Math.random() * quizQuestions.length)];
+    document.getElementById("question").innerText = q.q;
+    let html = "";
+    q.options.forEach(opt => {
+      html += `<button onclick="checkAnswer('${opt}','${q.answer}')">${opt}</button>`;
+    });
+    document.getElementById("answers").innerHTML = html;
+    document.getElementById("result").innerText = "";
   }
-}
 
-window.addEventListener("load", loadQuestion);
-</script>
-  <script>
-// ===== AI BIBLE QUIZ DATA =====
-const aiQuestions = [
-  { q: "Who was the mother of Jesus?", options: ["Mary", "Elizabeth", "Anna", "Martha"], answer: "Mary" },
-  { q: "Who led the Israelites out of Egypt?", options: ["Moses", "Aaron", "Joshua", "Samuel"], answer: "Moses" },
-  { q: "What did God create on the first day?", options: ["Light", "Sky", "Land", "Stars"], answer: "Light" },
-  { q: "Which apostle doubted Jesus' resurrection?", options: ["Thomas", "Peter", "John", "James"], answer: "Thomas" },
-  { q: "How many days and nights did it rain during the flood?", options: ["40", "30", "20", "50"], answer: "40" },
-  { q: "What river did John baptize people in?", options: ["Jordan", "Nile", "Euphrates", "Tigris"], answer: "Jordan" },
-  { q: "Who was the strongest man in the Bible?", options: ["Samson", "Goliath", "David", "Solomon"], answer: "Samson" },
-  { q: "Who interpreted Pharaoh's dream?", options: ["Joseph", "Daniel", "Moses", "Elijah"], answer: "Joseph" },
-  { q: "What was Paul’s original name?", options: ["Saul", "Barnabas", "Silas", "Timothy"], answer: "Saul" },
-  { q: "Who was thrown into the lions’ den?", options: ["Daniel", "Shadrach", "Meshach", "Abednego"], answer: "Daniel" },
-  // Add more questions here...
-];
-
-// ===== GENERATE AI QUESTION =====
-function generateAI() {
-  const q = aiQuestions[Math.floor(Math.random() * aiQuestions.length)];
-  
-  document.getElementById("aiQuestion").innerText = q.q;
-  
-  let html = "";
-  q.options.forEach(opt => {
-    html += `<button onclick="checkAI('${opt}','${q.answer}')">${opt}</button><br>`;
-  });
-  
-  document.getElementById("aiAnswers").innerHTML = html;
-  document.getElementById("aiResult").innerText = "";
-}
-
-// ===== CHECK AI ANSWER =====
-function checkAI(selected, correct) {
-  if (selected === correct) {
-    document.getElementById("aiResult").innerText = "✅ Correct!";
-  } else {
-    document.getElementById("aiResult").innerText = "❌ Wrong! Correct answer: " + correct;
+  function checkAnswer(selected, correct) {
+    if (selected === correct) {
+      document.getElementById("result").innerText = "✅ Correct!";
+    } else {
+      document.getElementById("result").innerText = "❌ Wrong! Correct answer: " + correct;
+    }
   }
-}
 
-// Optional: Load first AI question on page load
-// window.addEventListener("load", generateAI);
+  window.addEventListener("load", loadQuestion);
 </script>
+
+<!-- AI Quiz -->
+<script>
+  const aiQuestions = [
+    { q: "Who was the mother of Jesus?", options: ["Mary", "Elizabeth", "Anna", "Martha"], answer: "Mary" },
+    { q: "Who led the Israelites out of Egypt?", options: ["Moses", "Aaron", "Joshua", "Samuel"], answer: "Moses" },
+    { q: "What did God create on the first day?", options: ["Light", "Sky", "Land", "Stars"], answer: "Light" },
+    { q: "Which apostle doubted Jesus' resurrection?", options: ["Thomas", "Peter", "John", "James"], answer: "Thomas" },
+    { q: "How many days and nights did it rain during the flood?", options: ["40", "30", "20", "50"], answer: "40" },
+    { q: "What river did John baptize people in?", options: ["Jordan", "Nile", "Euphrates", "Tigris"], answer: "Jordan" },
+    { q: "Who was the strongest man in the Bible?", options: ["Samson", "Goliath", "David", "Solomon"], answer: "Samson" },
+    { q: "Who interpreted Pharaoh's dream?", options: ["Joseph", "Daniel", "Moses", "Elijah"], answer: "Joseph" },
+    { q: "What was Paul’s original name?", options: ["Saul", "Barnabas", "Silas", "Timothy"], answer: "Saul" },
+    { q: "Who was thrown into the lions’ den?", options: ["Daniel", "Shadrach", "Meshach", "Abednego"], answer: "Daniel" }
+  ];
+
+  function generateAI() {
+    const q = aiQuestions[Math.floor(Math.random() * aiQuestions.length)];
+    document.getElementById("aiQuestion").innerText = q.q;
+    let html = "";
+    q.options.forEach(opt => {
+      html += `<button onclick="checkAI('${opt}','${q.answer}')">${opt}</button>`;
+    });
+    document.getElementById("aiAnswers").innerHTML = html;
+    document.getElementById("aiResult").innerText = "";
+  }
+
+  function checkAI(selected, correct) {
+    if (selected === correct) {
+      document.getElementById("aiResult").innerText = "✅ Correct!";
+    } else {
+      document.getElementById("aiResult").innerText = "❌ Wrong! Correct answer: " + correct;
+    }
+  }
+</script>
+
 </body>
 </html>
