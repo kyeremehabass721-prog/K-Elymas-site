@@ -1,934 +1,205 @@
-/* General Styles */
+/* ============================================
+   ELYMAS DIGITAL HUB – Professional Styles
+   Clean, modern, mobile-first redesign
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap');
+
+:root {
+  --purple: #5b21b6;
+  --purple-dark: #4c1d95;
+  --purple-light: #7c3aed;
+  --orange: #f97316;
+  --orange-hover: #ea580c;
+  --text: #1e1b4b;
+  --text-muted: #64748b;
+  --bg: #f8fafc;
+  --card: #ffffff;
+  --border: #e2e8f0;
+  --shadow: 0 4px 20px rgba(91, 33, 182, 0.08);
+  --shadow-hover: 0 12px 32px rgba(91, 33, 182, 0.15);
+  --radius: 16px;
+  --radius-sm: 10px;
+  --header-height: 72px;
+  --welcome-height: 36px;
+}
+
+/* Dark mode variables */
+body.dark {
+  --bg: #0f0f13;
+  --card: #1a1a24;
+  --text: #f1f5f9;
+  --text-muted: #94a3b8;
+  --border: #2d2d3a;
+  --shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  --shadow-hover: 0 12px 32px rgba(0, 0, 0, 0.5);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
 
 body {
-  background-image: 
-    linear-gradient(rgba(75, 0, 130, 0.45), rgba(0, 0, 0, 0.55)),
-    url("images/wallpaper.png");
-
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-
-  font-family: Arial, Helvetica, sans-serif;
-  margin: 0;
-  text-align: center;
-  padding-top: 120px;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  padding-top: calc(var(--header-height) + var(--welcome-height));
+  min-height: 100vh;
+  transition: background 0.3s ease, color 0.3s ease;
 }
-/* ===== HEADER ===== */
 
+/* ========== HEADER ========== */
 .new-header {
-
-position: fixed;
-
-top: 0;
-
-left: 0;
-
-width: 100%;
-
-z-index: 1000;
-
-background: #6A0DAD;
-
-color: white;
-
-padding: 15px 10px;
-
-text-align: center;
-
-box-sizing: border-box;
-
-border-bottom: 4px solid #ff7a00;
-
-}
-
-/* ===== DARK BUTTON (VERY FAR LEFT) ===== */
-
-.dark-toggle{
-
-position: absolute;
-
-left: 5px;   /* push to real edge */
-
-top: 5px;
-
-background: #ff7a00;
-
-border: none;
-
-color: white;
-
-padding: 6px 10px;
-
-border-radius: 6px;
-
-cursor: pointer;
-
-z-index: 2000; /* make sure nothing blocks it */
-
-}
-
-/* ===== LOGO ===== */
-
-.new-header h1{
-
-margin: 0;
-
-font-size: 22px;
-
-line-height: 1.2;
-
-}
-
-/* ORANGE PART */
-
-.new-header .hub{
-
-color: #ff7a00;
-
-font-size: 18px;
-
-}
-
-/* TAGLINE */
-
-.new-header p{
-
-margin: 5px 0 10px;
-
-font-size: 13px;
-
-color: #ffcc99; /* soft orange text */
-
-}
-
-/* ===== NAV ===== */
-
-.top-nav{
-
-display: flex;
-
-justify-content: center; /* 👈 center items */
-
-align-items: center;
-
-gap: 15px; /* 👈 spacing between menu items */
-
-margin-top: 18px;
-
-}
-
-.top-nav a{
-
-display: flex;
-
-flex-direction: column;
-
-align-items: center;
-
-text-decoration: none;
-
-color: white;
-
-font-size: 13px;
-
-padding: 5px 8px; /* 👈 smaller, natural spacing */
-
-}
-
-/* 🔥 ORANGE HOVER EFFECT */
-
-.top-nav a:hover{
-
-background: #ff7a00;
-
-color: white;
-
-}
-
-.top-nav a span{
-
-display: block;
-
-font-size: 18px;
-
-}
-
-/* Menu Button */
-
-.menu-toggle{
-
-position:absolute;
-
-left:10px;
-
-top:15px;
-
-font-size:28px;
-
-color:white;
-
-cursor:pointer;
-
-}
-
-/* Normal Menu */
-
-#menu{
-
-display:none;
-
-flex-direction:column;
-
-background:#4b0082;
-
-padding:10px;
-
-}
-
-#menu.show{
-
-display:flex;
-
-}
-
-#menu a{
-
-color:white;
-
-text-decoration:none;
-
-padding:10px;
-
-font-weight:bold;
-
-}
-
-#menu a:hover{
-
-background:rgba(255,255,255,0.1);
-
-}
-
-/* Biography */
-
-.biography {
-
-background: white;
-
-max-width: 900px;
-
-margin: 20px auto;
-
-padding: 25px;
-
-border-radius: 10px;
-
-box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-
-text-align: left;
-
-overflow: hidden;
-
-}
-
-/* Author Photo */
-
-.author-photo {
-
-width: 100px;
-
-height: 100px;
-
-object-fit: cover;
-
-border-radius: 50%;
-
-float: left;
-
-margin-right: 15px;
-
-margin-bottom: 15px;
-
-border: 2px solid #4b0082;
-
-}
-
-/* Education */
-
-.education{
-
-max-width:900px;
-
-margin:40px auto;
-
-padding:20px;
-
-}
-
-.school{
-
-background:white;
-
-padding:20px;
-
-margin-bottom:20px;
-
-border-top:4px solid #ff7a00;
-
-border-bottom:4px solid #ff7a00;
-
-box-shadow:0 4px 12px rgba(0,0,0,0.1);
-
-}
-
-.level{
-
-color:black;
-
-margin:0 0 10px 0;
-
-}
-
-.school-name{
-
-color:purple;
-
-font-weight:bold;
-
-margin:0 0 8px 0;
-
-}
-
-.school span{
-
-color:orange;
-
-font-weight:bold;
-
-}
-
-/* BOOKS SECTION */
-
-.books{
-
-display:grid;
-
-grid-template-columns:repeat(2, 1fr);
-
-gap:15px;
-
-max-width:700px;
-
-margin:30px auto;
-
-padding:10px;
-
-}
-
-.book{
-
-background:white;
-
-border-radius:12px;
-
-overflow:hidden;
-
-box-shadow:0 4px 15px rgba(0,0,0,0.1);
-
-position:relative;
-
-transition:transform 0.3s ease, box-shadow 0.3s ease;
-
-}
-
-.book:hover{
-
-transform:translateY(-8px);
-
-box-shadow:0 12px 30px rgba(0,0,0,0.2);
-
-}
-
-.book img{
-
-width:100%;
-
-height:auto;
-
-display:block;
-
-}
-
-.book-info{
-
-position:absolute;
-
-bottom:0;
-
-left:0;
-
-right:0;
-
-background:linear-gradient(to top, rgba(0,0,0,0.85), rgba(0,0,0,0));
-
-color:white;
-
-padding:10px;
-
-text-align:left;
-
-}
-
-.book-info h3{
-
-font-size:14px;
-
-margin:0;
-
-}
-
-.book-info p{
-
-font-size:12px;
-
-margin:5px 0;
-
-}
-
-.price{
-
-color:#ff7a00;
-
-font-weight:bold;
-
-font-size:16px;
-
-margin:5px 0;
-
-}
-
-.button{
-
-display:inline-block;
-
-background:#ff7a00 !important;
-
-color:white !important;
-
-padding:12px 15px;
-
-border-radius:8px;
-
-text-decoration:none;
-
-font-weight:bold;
-
-}
-
-/* WELCOME BAR */
-
-.welcome-bar {
-
-position: fixed;
-
-top: 60px; /* height of your header, adjust if header is taller */
-
-left: 0;
-
-width: 100%;
-
-background: #ff7a00;
-
-color: white;
-
-padding: 6px 0;
-
-font-size: 14px;
-
-text-align: center;
-
-z-index: 1001; /* above the header */
-
-}
-
-.scroll-text{
-
-display:inline-block;
-
-white-space:nowrap;
-
-animation:scrollLeft 20s linear infinite;
-
-}
-
-@keyframes scrollLeft{
-
-from{ transform:translateX(100%); }
-
-to{ transform:translateX(-100%); }
-
-}
-
-/* WhatsApp Button */
-
-.whatsapp-float{
-
-position:fixed;
-
-bottom:90px;
-
-right:20px;
-
-background:#25D366;
-
-color:white;
-
-font-size:24px;
-
-width:55px;
-
-height:55px;
-
-display:flex;
-
-align-items:center;
-
-justify-content:center;
-
-border-radius:50%;
-
-text-decoration:none;
-
-box-shadow:0 4px 12px rgba(0,0,0,0.3);
-
-z-index:9999;
-
-}
-
-/* Footer */
-
-footer {
-
-background: #111;
-
-color: white;
-
-padding: 20px;
-
-margin-top: 40px;
-
-}
-
-/* Mobile */
-
-@media(max-width:600px){
-
-header h1{
-
-font-size:26px;
-
-}
-
-header p{
-
-font-size:16px;
-
-}
-
-.author-photo{
-
-width:80px;
-
-height:80px;
-
-}
-
-}
-
-.payment-methods{
-
-display: flex;
-
-justify-content: space-between;
-
-align-items: center;
-
-max-width: 300px;
-
-margin: 10px auto;
-
-}
-
-.payment-methods img{
-
-width: 40px;
-
-height: 40px;
-
-object-fit: contain;
-
-}
-
-.heart{
-
-cursor:pointer;
-
-font-size:20px;
-
-transition: all 0.3s ease;
-
-}
-
-.heart.liked{
-
-color:red;
-
-transform: scale(1.3);
-
-animation: pulse 0.4s ease;
-
-}
-
-@keyframes pulse{
-
-0%{ transform: scale(1); }
-
-50%{ transform: scale(1.4); }
-
-100%{ transform: scale(1.3); }
-
-}
-
-.logo{
-
-text-align: center;
-
-}
-
-.logo-top{
-
-display: block;
-
-}
-
-.logo-bottom{
-
-display: block;
-
-margin-left: 25px; /* This pushes 📚SHOP slightly to the right */
-
-}
-
-/* Dark Mode */
-
-body.dark{
-
-background:#121212;
-
-color:white;
-
-}
-
-body.dark .school{
-
-background:#2a2a2a;
-
-}
-
-body.dark .level{
-
-color:white;
-
-}
-
-body.dark .school-name{
-
-color:#ff7a00;
-
-}
-
-body.dark .school span{
-
-color:#ffb347;
-
-}
-
-body.dark .biography,
-
-body.dark .education,
-
-body.dark .school,
-
-body.dark .book{
-
-background:#1e1e1e;
-
-color:white;
-
-}
-
-/* Smooth Scroll Animation */
-
-.biography,
-
-.education,
-
-.book{
-
-opacity: 0;
-
-transform: translateY(30px);
-
-transition: all 0.6s ease;
-
-}
-
-.show{
-
-opacity: 1 !important;
-
-transform: translateY(0) !important;
-
-}
-
-body.dark .level{
-
-color:white !important;
-
-}
-
-/* PREVIEW MODAL */
-
-.preview-modal{
-
-display:none;
-
-position:fixed;
-
-top:0;
-
-left:0;
-
-width:100%;
-
-height:100%;
-
-background:rgba(0,0,0,0.8);
-
-justify-content:center;
-
-align-items:center;
-
-z-index:99999;
-
-}
-
-.preview-content{
-
-background:white;
-
-padding:20px;
-
-border-radius:12px;
-
-max-width:300px;
-
-text-align:center;
-
-position:relative;
-
-}
-
-.preview-content img{
-
-width:100%;
-
-border-radius:10px;
-
-}
-
-.close-btn{
-
-position:absolute;
-
-top:10px;
-
-right:15px;
-
-font-size:25px;
-
-cursor:pointer;
-
-}
-
-/* EDGE-TO-EDGE NAV */
-
-.top-nav{
-
-display: flex;
-
-justify-content: space-between; /* pushes first & last to edges */
-
-align-items: center;
-
-width: 100%;
-
-margin-top: 18px;
-
-padding: 0; /* remove side padding */
-
-}
-
-.top-nav a{
-
-display: flex;
-
-flex-direction: column;
-
-align-items: center;
-
-text-decoration: none;
-
-color: white;
-
-font-size: 15px;
-
-flex: 1; /* equal width */
-
-padding: 5px 0;
-
-}
-
-.top-nav span{
-
-font-size: 18px;
-
-}
-
-.top-nav small{
-
-font-size: 11px;
-
-margin-top: 2px;
-
-}
-
-.top-nav a:hover{
-
-transform: scale(1.05);
-
-transition: 0.2s ease;
-
-}
-
-#answers button{
-
-display:block;
-
-width:100%;
-
-margin:8px 0;
-
-padding:10px;
-
-border:none;
-
-border-radius:8px;
-
-background:#4b0082;
-
-color:white;
-
-font-weight:bold;
-
-cursor:pointer;
-
-}
-
-#answers button:hover{
-
-background:#ff7a00;
-
-}
-
-#answers button {
-
-display: block;
-
-margin: 5px 0; /* small vertical space */
-
-width: 100%;
-
-padding: 8px;
-
-font-size: 14px;
-
-border-radius: 6px;
-
-border: 1px solid #ccc;
-
-cursor: pointer;
-
-background-color: #ff7a00;
-
-color: white;
-
-transition: 0.3s;
-
-}
-
-#answers button:hover {
-
-background-color: #e06b00;
-
-}
-/* ===== FULL DARK MODE FIX ===== */
-
-body.dark{
-  background:#121212;
-  color:#ffffff;
-}
-
-/* Sections */
-body.dark .biography,
-body.dark .education,
-body.dark .school,
-body.dark .book,
-body.dark .preview-content{
-  background:#1e1e1e;
-  color:white;
-}
-
-/* Book overlay */
-body.dark .book-info{
-  background:linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0));
-}
-
-/* Inputs */
-body.dark input{
-  background:#2a2a2a;
-  color:white;
-  border:1px solid #444;
-}
-
-/* Buttons */
-body.dark .button,
-body.dark #answers button{
-  background:#ff7a00;
-  color:white;
-}
-
-/* Footer */
-body.dark footer{
-  background:#000;
-}
-
-/* Header stays same but slightly darker */
-body.dark .new-header{
-  background:#4b0082;
-}
-.education h2,
-#bible h2 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--header-height);
+  background: linear-gradient(135deg, var(--purple-dark), var(--purple));
   color: white;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
 }
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.dark-toggle {
+  background: rgba(255, 255, 255, 0.15);
+  border: none;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+
+.dark-toggle:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.logo-block h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0.5px;
+}
+
+.logo-block .hub {
+  color: var(--orange);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.logo-block p {
+  display: none; /* hide on mobile for space */
+}
+
+.top-nav {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.top-nav a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.7rem;
+  font-weight: 500;
+  padding: 6px 10px;
+  border-radius: 10px;
+  transition: all 0.2s ease;
+  min-width: 52px;
+}
+
+.top-nav a span {
+  font-size: 1.15rem;
+  margin-bottom: 2px;
+}
+
+.top-nav a:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  transform: translateY(-1px);
+}
+
+/* Welcome bar */
+.welcome-bar {
+  position: fixed;
+  top: var(--header-height);
+  left: 0;
+  width: 100%;
+  height: var(--welcome-height);
+  background: var(--orange);
+  color: white;
+  overflow: hidden;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+}
+
+.scroll-text {
+  display: inline-block;
+  white-space: nowrap;
+  animation: scrollLeft 28s linear infinite;
+  font-size: 0.85rem;
+  font-weight: 500;
+  padding-left: 100%;
+}
+
+@keyframes scrollLeft {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+/* ========== HERO ========== */
+.hero {
+  position: relative;
+  height: 420px;
+  background:
+    linear-gradient(to bottom, rgba(76, 29, 149, 0.55), rgba(15, 15, 19, 0.75)),
+    url("images/wallpaper.png") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  margin-bottom: 40px;
+}
+
+.hero-content {
+  max-width: 700px;
+  padding: 0 20px;
+}
+
+.hero-content h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(1.8rem, 5vw, 2.6rem);
+  font-weight: 800;
+  margin-bottom: 12
+... 
